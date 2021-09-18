@@ -10,7 +10,7 @@ function App() {
     <Router>
     <div className="App">
       <header className="App-header">
-        <h1>Header to be changed</h1>
+        <h1>Welcome to Water My Plants v1.0</h1>
       </header>
       <nav>
         <h2>Nav to be changed per page</h2>
