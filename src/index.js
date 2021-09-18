@@ -7,7 +7,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
-import  reducer  from "./reducers/Reducer"
+import reducer from "./reducers/Reducer"
 import { BrowserRouter as Router } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 
@@ -30,9 +30,7 @@ ReactDOM.render(
   <ThemeProvider theme={theme}>
     <Router>
       <Provider store={store}>
-        
-          <App />
-        
+        <App />
       </Provider>
     </Router>
   </ThemeProvider>,
