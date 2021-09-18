@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="BP-bice16HXopispx_VL" name="Page-1">
-        <mxGraphModel dx="563" dy="583" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="578" dy="645" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -30,9 +30,12 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="13" value="Plants.js" style="swimlane;" parent="1" vertex="1">
-                    <mxGeometry x="340" y="520" width="200" height="200" as="geometry"/>
+                    <mxGeometry x="330" y="550" width="200" height="200" as="geometry"/>
                 </mxCell>
-                <mxCell id="15" value="history.push(&quot;/Plants&quot;)" style="endArrow=classic;html=1;entryX=0.375;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.791;exitY=0.973;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="4" target="13" edge="1">
+                <mxCell id="19" value="Axios calls to render list of plants&amp;nbsp;&lt;br&gt;CRUD&lt;br&gt;Create - POST&lt;br&gt;Read - GET&lt;br&gt;Update - PUT&lt;br&gt;Delete - DELETE" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="13">
+                    <mxGeometry x="5" y="65" width="190" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="history.push(&quot;/Plants&quot;) | Protected Route" style="endArrow=classic;html=1;entryX=0.375;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.791;exitY=0.973;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="4" target="13" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="280" y="350" as="sourcePoint"/>
                         <mxPoint x="330" y="300" as="targetPoint"/>
@@ -53,6 +56,12 @@
                         <mxPoint x="380" y="470" as="targetPoint"/>
                         <Array as="points"/>
                     </mxGeometry>
+                </mxCell>
+                <mxCell id="20" value="" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="150" y="615" width="140" height="125" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="570" y="615" width="140" height="125" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
