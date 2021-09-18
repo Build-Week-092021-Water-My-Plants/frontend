@@ -7,18 +7,34 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
-import { reducer } from './reducers/index'
+import { reducer } from './reducers/index';
+import { BrowserRouter as Router } from "react-router-dom";
+import { ThemeProvider } from "styled-components";
+
+const theme =
+{
+
+  primaryColor: "#284B63",
+  secondaryColor: "#D9D9D9",
+  accentColor: "#3C6E71",
+  black: "#353535",
+  white: "FFFFFF",
+};
 
 const store = createStore(reducer, applyMiddleware(thunk, logger));
 
 const rootElement = document.getElementById('root');
 
 ReactDOM.render(
-  <Provider store={store}>
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-  </Provider>,
+  <ThemeProvider theme={theme}>
+    <Router>
+      <Provider store={store}>
+        <React.StrictMode>
+          <App />
+        </React.StrictMode>
+      </Provider>
+    </Router>
+  </ThemeProvider>,
   rootElement
 );
 
