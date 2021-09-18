@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import styled from "styled-components";
 import PrivateRoute from "./helpers/PrivateRoute";
 // import LoginPage from "./components/pages/Login/LoginContainer";
