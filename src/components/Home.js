@@ -15,7 +15,7 @@ const Home = () => {
                         <Link to="/plants"> My Plants </Link>
                     </span>
                     <span className="navspans">
-                        <Link to="/meet-team"> Meet Our Team </Link>
+                        <Link to="/meet-our-team"> Meet Our Team </Link>
                     </span>
                 </nav>
             </header>

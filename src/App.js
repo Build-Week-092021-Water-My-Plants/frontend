@@ -7,6 +7,7 @@ import './App.css';
 import Home from "./components/Home";
 import LoginForm from "./components/LoginForm";
 import SignupForm from "./components/SignupForm";
+import MeetOurTeam from "./components/MeetOurTeam";
 
 
 const StyledBody = styled.div`
@@ -38,8 +39,8 @@ function App() {
               <SignupForm />
             </Route>
 
-            <Route path="/meet-team">
-              {/* <Team /> */}
+            <Route path="/meet-our-team">
+              <MeetOurTeam />
             </Route>
 
             <Route exact path="/">
