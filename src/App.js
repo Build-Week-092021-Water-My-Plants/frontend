@@ -5,6 +5,8 @@ import PrivateRoute from "./helpers/PrivateRoute";
 // import LoginPage from "./components/pages/Login/LoginContainer";
 import './App.css';
 import Home from "./components/Home";
+import LoginForm from "./components/LoginForm";
+import SignupForm from "./components/SignupForm";
 
 
 const StyledBody = styled.div`
@@ -29,11 +31,11 @@ function App() {
           <Switch>
             <PrivateRoute exact path="/plants"/>
             <Route path="/login">
-              {/* <LoginPage /> */}
+              <LoginForm />
             </Route>
 
             <Route path="/signup">
-              {/* <Signup /> */}
+              <SignupForm />
             </Route>
 
             <Route path="/meet-team">

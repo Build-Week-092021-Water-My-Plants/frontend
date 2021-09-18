@@ -12,10 +12,14 @@ const Home = () => {
                         <Link to="/"> Home </Link>
                     </span>
                     <span className="navspans">
-                        <Link to="/meet-team"> Meet Our & nbsp; Team </Link>
+                        <Link to="/plants"> My Plants </Link>
+                    </span>
+                    <span className="navspans">
+                        <Link to="/meet-team"> Meet Our Team </Link>
                     </span>
                 </nav>
             </header>
+            
             <div className="whole">
                 <div className="main">
                     <h3> Tired of forgetting to water that thirsty plant ? </h3>
@@ -24,8 +28,8 @@ const Home = () => {
                         Water My Plants
                     </h1>
                     <div className="button-container">
-                        <Link to="/landing">
-                            <button className="create-acctBtn"> Sign - up </button>
+                        <Link to="/signup">
+                            <button className="create-acctBtn"> Sign-up </button>
                         </Link>
                         <Link to="/login">
                             <button className="loginBtn"> Login </button>
