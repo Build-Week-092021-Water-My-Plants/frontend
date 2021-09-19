@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 const StyledTeam = styled.div`
     box-sizing: border-box;
+    
 
     .whole {
         width: 100%;
@@ -61,6 +62,7 @@ const StyledTeam = styled.div`
 
     header {
         margin-bottom: 2%;
+        
     }
 
     @media (max-width: 500px) {
