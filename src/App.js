@@ -8,6 +8,7 @@ import Home from "./components/Home";
 import LoginForm from "./components/LoginForm";
 import SignupForm from "./components/SignupForm";
 import MeetOurTeam from "./components/MeetOurTeam";
+import AddPlant from "./Schema/AddPlant/AddPlant";
 
 
 const StyledBody = styled.div`
@@ -30,6 +31,7 @@ function App() {
       <div className="App">
         <StyledBody className="App">
           <Switch>
+          <PrivateRoute path='/addPlant' component={AddPlant} />
             <PrivateRoute exact path="/plants"/>
             <Route path="/login">
               <LoginForm />
