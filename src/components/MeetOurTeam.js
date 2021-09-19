@@ -107,31 +107,31 @@ const MeetOurTeam = () => {
                 <div className='card'>
                     <img
                         className='card-photo'
-                        src=''
-                        alt='profile pic of ADD NAME'
+                        src='https://ca.slack-edge.com/ESZCHB482-U021YSANWNS-186d43f1f01d-512'
+                        alt='profile pic of Jordan Gearheart'
                     />
-                    <h2>ADD TEAM MEMBER NAME</h2>
-                    <h3>add Role</h3>
+                    <h2>Jordan Gearheart</h2>
+                    <h3>Full Stack Developer | Backend Team Lead</h3>
                 </div>
 
                 <div className='card'>
                     <img
                         className='card-photo'
-                        src=''
+                        src='https://ca.slack-edge.com/ESZCHB482-U0225J7RTT4-531a25aebb6f-512'
                         alt='profile pic for ADD NAME'
                     />
-                    <h2>ADD TEAM MEMBER NAME</h2>
-                    <h3>add Role</h3>
+                    <h2>Sebastian Leal </h2>
+                    <h3>Fullstack Web & Computer Science Engineer</h3>
                 </div>
                 
                 <div className='card'>
                     <img
                         className='card-photo'
-                        src=''
+                        src='https://ca.slack-edge.com/ESZCHB482-U025FD6HPDG-1ea06076331a-512'
                         alt='profile of ADD NAME'
                     />
-                    <h2>ADD TEAM MEMBER NAME</h2>
-                    <h3>add Role</h3>
+                    <h2>Alan Waddell </h2>
+                    <h3>Fullstack Web & Computer Science Engineer</h3>
                 </div>
 
                 <div className='card'>
@@ -165,7 +165,6 @@ const MeetOurTeam = () => {
                     <h3>add Role</h3>
                 </div>
                 
-                <div className='card'>
                 <div className='card'>
                     <img
                         className='card-photo'
@@ -185,7 +184,6 @@ const MeetOurTeam = () => {
                     <h2>ADD TEAM MEMBER NAME</h2>
                     <h3>add Role</h3>
                 </div> */}
-                </div>
             </div>
         </div>
     </StyledTeam>
