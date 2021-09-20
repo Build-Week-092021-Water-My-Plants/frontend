@@ -1,7 +1,6 @@
 
-const theme = 
- {
-
+const theme =
+{
   // primaryColor: "#284B63",
   primaryColor: "#427E36",
   // secondaryColor: "#D9D9D9",
