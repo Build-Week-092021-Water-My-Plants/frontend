@@ -11,6 +11,21 @@ const formSchema = yup.object().shape ({
         .trim()
         .required('Password must be at least 6 characters')
         .min(6, 'Password must be at least 6 characters'),
+    // Plant Form
+    nickname: yup
+        .string()
+        .trim()
+        .required('What is the name of this plant?'),
+    species: yup
+        .string()
+        .trim()
+        .required('What species is this plant?'),
+    h2oFrequency: yup
+        .string()
+        .trim()
+        .required('How often should you water this beaut?'),
+    image: yup
+        .image()
 }
     
 )
