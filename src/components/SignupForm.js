@@ -25,7 +25,7 @@ const SignupForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         SignupForm(formValue);
-        axios()
+        axios
         .post('/', formValue)
         .then((res)=> {
             console.log('loginform ln:28 response.data', res.data)
