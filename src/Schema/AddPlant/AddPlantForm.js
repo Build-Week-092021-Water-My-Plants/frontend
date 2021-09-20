@@ -2,12 +2,13 @@ import React from 'react'
 import { useHistory } from "react-router-dom";
 
 function AddPlantForm(props) {
-    const { formValues, updateValues, submit } = props;
+    const { formValues, updateValues, submitForm, disabled } = props;
 
     const history = useHistory();
+
     const onSubmit = (evt) => {
         evt.preventDefault();
-        // submit();
+        submitForm();
         history.push("/AddSuccess");
     }
 
@@ -47,16 +48,16 @@ function AddPlantForm(props) {
                         onChange={onChange}
                     />
                 </label>
-                <label> h20Frequency &nbsp;
+                <label> h2oFrequency &nbsp;
                     <input 
                         type="text"
-                        name="h2ofrequency"
+                        name="h2oFrequency"
                         placeholder="h2oFrequency"
                         value={formValues.h2oFrequency}
                         onChange={onChange}
                     />
                 </label>
-                <label> Image &nbsp;
+                {/* <label> Image &nbsp;
                     <input 
                         type="image"
                         src={formValues.image}
@@ -65,7 +66,10 @@ function AddPlantForm(props) {
                         height="48"
                         onChange={onChange}
                     />
-                </label>
+                </label> */}
+                <button id="submitBtn" disabled={disabled}>
+                    Add
+                </button>
             </form>
         </div>
     )
