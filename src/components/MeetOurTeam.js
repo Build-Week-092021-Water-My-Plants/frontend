@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import styled from "styled-components";
 
+
 const StyledTeam = styled.div`
     box-sizing: border-box;
     
@@ -87,6 +88,8 @@ const MeetOurTeam = () => {
                 <nav>
                     <span className="navspans"><Link to="/">Home</Link></span>
                     <span className="navspans"><Link to="/meet-our-team">Meet our Team</Link></span>
+                    <span className="navspans"><Link to="/login">Login</Link></span>
+                    <span className="navspans"><Link to="/signup">Sign-up</Link></span>
                 </nav>
             </header>
 

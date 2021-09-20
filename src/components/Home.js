@@ -68,6 +68,10 @@ const StyledHome = styled.div`
         border: 10px double #284b63;
     }
 
+    header, h1 {
+        margin: 0 10px;
+    }
+
     .main h1 {
         margin: 0 auto;
         font-size: 60px;
