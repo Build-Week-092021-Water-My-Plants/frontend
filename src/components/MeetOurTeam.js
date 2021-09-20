@@ -133,7 +133,7 @@ const MeetOurTeam = () => {
                         alt='profile of ADD NAME'
                     />
                     <h2>Alan Waddell </h2>
-                    <h3>Fullstack Web & Computer Science Engineer</h3>
+                    <h3>Full Stack Developer</h3>
                 </div>
 
                 <div className='card'>

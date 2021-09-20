@@ -31,7 +31,7 @@ function App() {
       <div className="App">
         <StyledBody className="App">
           <Switch>
-          <PrivateRoute path='/addPlant' component={AddPlant} />
+          <Route path='/addPlant' component={AddPlant} />
             <PrivateRoute exact path="/plants"/>
             <Route path="/login">
               <LoginForm />
