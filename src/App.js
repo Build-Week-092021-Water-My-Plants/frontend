@@ -33,7 +33,7 @@ function App() {
           <Switch>
           <Route path='/addPlant' component={AddPlant} />
             <PrivateRoute exact path="/plants"/>
-            <Route path="/login">
+            <Route path="/login" >
               <LoginForm />
             </Route>
 
