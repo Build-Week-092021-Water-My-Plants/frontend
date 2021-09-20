@@ -133,17 +133,17 @@ const MeetOurTeam = () => {
                         alt='profile of ADD NAME'
                     />
                     <h2>Alan Waddell </h2>
-                    <h3>Fullstack Web & Computer Science Engineer</h3>
+                    <h3>Full Stack Developer</h3>
                 </div>
 
                 <div className='card'>
                     <img
                         className='card-photo'
-                        src=''
-                        alt='profile of ADD NAME'
+                        src='https://ca.slack-edge.com/ESZCHB482-U025UM0EW4T-9fe7d300bbf6-512'
+                        alt='Abraham'
                     />
-                    <h2>ADD TEAM MEMBER NAME</h2>
-                    <h3>add Role</h3>
+                    <h2>Abraham Garcia</h2>
+                    <h3>Fullstack Web & Computer Science Engineer</h3>
                 </div>
 
 
