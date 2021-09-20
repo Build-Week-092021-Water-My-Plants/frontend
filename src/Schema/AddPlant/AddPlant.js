@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom';
 import AddPlantForm from './AddPlantForm'
 import schema from '../validation/formSchema';
 import * as yup from 'yup';
@@ -54,13 +55,23 @@ export default function AddPlant() {
 
 
     return (
-        <div>
-            <h1>This is Rendered from AddPlant.js</h1>
+        <div className="addPlant">
+            <h1>Add Plant</h1>
+            <nav>
+                <Link to="/meet-our-team">Meet Our Team</Link>
+                <span className='navspans'></span>
+                <Link to="/">Home</Link>
+                <span className='navspans'></span>
+                <Link to="/login">Log-In</Link>
+                <span className='navspans'></span>
+            </nav>
+            
             <AddPlantForm 
                 formValues={formValues} 
                 updateValues={updateValues} 
                 submitForm={submitForm} 
                 disabled={disabled}
+                errors={errors}
                 />
         </div>
     )

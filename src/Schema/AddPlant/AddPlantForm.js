@@ -2,7 +2,7 @@ import React from 'react'
 import { useHistory } from "react-router-dom";
 
 function AddPlantForm(props) {
-    const { formValues, updateValues, submitForm, disabled } = props;
+    const { formValues, updateValues, submitForm, disabled, errors } = props;
 
     const history = useHistory();
 
@@ -22,15 +22,7 @@ function AddPlantForm(props) {
         <div>
             <form onSubmit={onSubmit}>
             <h1>Plant Form</h1>
-                {/* <label> ID &nbsp;
-                    <input 
-                        type="number"
-                        name="id"
-                        value={formValues.id}
-                        onChange={onChange}
-                    />
-                </label> */}
-                <label> Nickname &nbsp;
+                <label> Nickname &nbsp; 
                     <input 
                         type="text"
                         name="nickname"
@@ -48,7 +40,7 @@ function AddPlantForm(props) {
                         onChange={onChange}
                     />
                 </label>
-                <label> h2oFrequency &nbsp;
+                <label> h2o Frequency &nbsp;
                     <input 
                         type="text"
                         name="h2oFrequency"
@@ -67,8 +59,19 @@ function AddPlantForm(props) {
                         onChange={onChange}
                     />
                 </label> */}
+                <div className="errors">
+                    <div className="nicknameError">
+                        {errors.nickname}
+                    </div>
+                    <div className="speciesError">
+                        {errors.species}
+                    </div>
+                    <div className="h2oError">
+                        {errors.h2oFrequency}
+                    </div>
+                </div>
                 <button id="submitBtn" disabled={disabled}>
-                    Add
+                    Add Plant
                 </button>
             </form>
         </div>
