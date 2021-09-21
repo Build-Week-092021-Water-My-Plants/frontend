@@ -13,6 +13,7 @@ import PlantList from "./components/PlantList";
 import EditPlant from "./Schema/EditPlant/EditPlant";
 import EditPlantSuccess from "./Schema/EditPlant/EditPlantSuccess";
 import './App.css';
+import Plant from "./Schema/AddPlant/Plant";
 
 
 
@@ -45,7 +46,7 @@ function App() {
             <PrivateRoute path='/editPlant' component={EditPlant} /> */}
           <Route path='/editPlant' component={EditPlant} />
           <Route path='/editPlantSuccess' component={EditPlantSuccess} />
-            <PrivateRoute exact path="/plants"/>
+            <Route exact path="/plant" component={ Plant }/>
 
             <Route path="/login">
               <LoginForm />
