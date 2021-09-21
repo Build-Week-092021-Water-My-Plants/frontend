@@ -7,10 +7,14 @@ import LoginForm from "./components/LoginForm";
 import SignupForm from "./components/SignupForm";
 import MeetOurTeam from "./components/MeetOurTeam";
 import AddPlant from "./Schema/AddPlant/AddPlant";
-import './App.css';
 import AddSuccess from "./Schema/AddPlant/AddSuccess";
 import SignUpSuccess from "./components/SignupSuccess";
 import PlantList from "./components/PlantList";
+import EditPlant from "./Schema/EditPlant/EditPlant";
+import EditPlantSuccess from "./Schema/EditPlant/EditPlantSuccess";
+import './App.css';
+
+
 
 
 const StyledBody = styled.div`
@@ -33,12 +37,17 @@ function App() {
       <div className="App">
         <StyledBody className="App">
           <Switch>
+
           <PrivateRoute path='/SignupSuccess' component={SignUpSuccess} />
             <PrivateRoute path='/AddSuccess' component={AddSuccess} />
             <PrivateRoute path='/addPlant' component={AddPlant} />
             <Route path='/plantList' component={PlantList} />
             {/* <PrivateRoute path='/EditPlantSuccess' component={EditPlantSuccess} />
             <PrivateRoute path='/editPlant' component={EditPlant} /> */}
+          <Route path='/editPlant' component={EditPlant} />
+          <Route path='/editPlantSuccess' component={EditPlantSuccess} />
+          
+            <PrivateRoute exact path="/plants"/>
 
             <Route path="/login">
               <LoginForm />
