@@ -58,16 +58,17 @@ export default function AddPlant() {
 
     return (
         <StyledAddPlants>
-            <header></header>
-            <h1>Add Plant</h1>
-            <nav>
-                <Link to="/meet-our-team">Meet Our Team</Link>
-                <span className='navspans'></span>
-                <Link to="/">Home</Link>
-                <span className='navspans'></span>
-                <Link to="/login">Log-In</Link>
-                <span className='navspans'></span>
-            </nav>
+            <header>
+                <h1>Add Plant</h1>
+                <nav>
+                    {/* <span className='navspans'></span> */}
+                    <Link to="/">Home</Link>
+                    {/* <span className='navspans'></span> */}
+                    <Link to="/login">Log-In</Link>
+                    {/* <span className='navspans'></span> */}
+                    <Link to="/meet-our-team">Meet Our Team</Link>
+                </nav>
+            </header>
 
             <AddPlantForm
                 formValues={formValues}
@@ -81,13 +82,48 @@ export default function AddPlant() {
 }
 
 const StyledAddPlants = styled.div`
-    background-color: crimson;
-
+    background-color: ${prop => prop.theme.secondaryColor};
     display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
-    flex-direction:column;
+    border:solid 1px red;
+    
+    header {
+        display:flex;
+        justify-content:space-around;
+        align-items:center;
+        width:100%;
+    }
+    nav {
+        width:30%;
+    }
+    nav a {
+        border:1px solid ${prop => prop.theme.accentColor};
+        padding:1%;
+        margin:0.2%;
+        color: black;
+        text-decoration:none;
+    }
+    nav a:hover {
+        border:1px solid black;
+        color: white;
+    }
 
+    .addPlantForm form {
+        background-color: ${prop => prop.theme.primaryColor};
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        border:1px solid ${prop => prop.theme.accentColor};
+        border-radius:10px;
+        height:300px;
+        width:400px;
+        margin:2%;
+    }
 
-
+    .addPlantForm label {
+        margin: 1%;
+    }
 `

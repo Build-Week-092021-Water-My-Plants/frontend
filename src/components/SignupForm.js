@@ -105,7 +105,7 @@ export default SignupForm;
 // `;
 
 const StyledHeader = styled.header`
-  color: ${({ theme }) => theme.secondaryColor};
+    color: ${({ theme }) => theme.secondaryColor};
 `;
 
 const StyledMainPage = styled.div`

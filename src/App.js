@@ -7,6 +7,7 @@ import LoginForm from "./components/LoginForm";
 import SignupForm from "./components/SignupForm";
 import MeetOurTeam from "./components/MeetOurTeam";
 import AddPlant from "./Schema/AddPlant/AddPlant";
+import AddSuccess from './Schema/AddPlant/AddSuccess';
 import './App.css';
 
 
@@ -30,6 +31,7 @@ function App() {
       <div className="App">
         <StyledBody className="App">
           <Switch>
+          <Route path='/addsuccess' component={AddSuccess} />
           <Route path='/addPlant' component={AddPlant} />
             <PrivateRoute exact path="/plants"/>
             <Route path="/login">

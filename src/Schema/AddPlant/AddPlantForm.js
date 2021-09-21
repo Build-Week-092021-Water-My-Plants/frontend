@@ -9,7 +9,7 @@ function AddPlantForm(props) {
     const onSubmit = (evt) => {
         evt.preventDefault();
         submitForm();
-        history.push("/AddSuccess");
+        history.push("/addsuccess");
     }
 
     const onChange = (evt) => {
@@ -19,10 +19,10 @@ function AddPlantForm(props) {
 
 
     return (
-        <div>
+        <div className="addPlantForm">
             <form onSubmit={onSubmit}>
             <h1>Plant Form</h1>
-                <label> Nickname &nbsp; 
+                <label>
                     <input 
                         type="text"
                         name="nickname"
@@ -31,7 +31,7 @@ function AddPlantForm(props) {
                         onChange={onChange}
                     />
                 </label>
-                <label> Species &nbsp;
+                <label>
                     <input 
                         type="text"
                         name="species"
@@ -40,7 +40,7 @@ function AddPlantForm(props) {
                         onChange={onChange}
                     />
                 </label>
-                <label> h2o Frequency &nbsp;
+                <label>
                     <input 
                         type="text"
                         name="h2oFrequency"
