@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import AddPlantForm from './AddPlantForm'
 import schema from '../validation/formSchema';
 import * as yup from 'yup';
+import styled from 'styled-components';
 
 const initialValues = {
     nickname: '',
@@ -38,7 +39,8 @@ export default function AddPlant() {
             h2oFrequency: '',
             // image: ''
         }
-        setPlantList([...plantList, newPlant])
+        setPlantList([ ...plantList, newPlant])
+
     }
 
     const validate = (name, value) => {
@@ -55,7 +57,8 @@ export default function AddPlant() {
 
 
     return (
-        <div className="addPlant">
+        <StyledAddPlants>
+            <header></header>
             <h1>Add Plant</h1>
             <nav>
                 <Link to="/meet-our-team">Meet Our Team</Link>
@@ -72,8 +75,19 @@ export default function AddPlant() {
                 submitForm={submitForm}
                 disabled={disabled}
                 errors={errors}
-            />
-        </div>
+                />
+        </StyledAddPlants>
     )
 }
 
+const StyledAddPlants = styled.div`
+    background-color: crimson;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
+
+
+`
