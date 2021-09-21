@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import * as yup from "yup";
-import schema from "../formSchema";
+import formSchema from "../validation/formSchema";
+import { Link } from "react-router-dom";
 import EditPlantForm from "./EditPlantForm";
+import styled from "styled-components";
 
 const initialFormValues = {
     nickname: "",
@@ -26,7 +28,7 @@ export default function EditPlant() {
     const [disabled, setDisabled] = useState(initialDisabled);
 
     const validate = (name, value) => {
-        yup.reach(schema, name)
+        yup.reach(formSchema, name)
             .validate(value)
             .then((valid) => {setFormErrors({...formErrors, [name]: "",});
             })
@@ -36,7 +38,7 @@ export default function EditPlant() {
     };
 
     useEffect(() => {
-        schema.isValid(formValues)
+        formSchema.isValid(formValues)
             .then((valid) => {setDisabled(!valid);});
     }, [formValues]);
 
@@ -56,21 +58,23 @@ export default function EditPlant() {
             h2oInterval: formValues.h2oInterval,
             h2oAmount: formValues.h2oAmount.trim(),
         }
-        putNewPlant(editPlant);
+        // putNewPlant(editPlant);
     }
 
 
     return (
         <div>
             <div>
-                 <nav>
-                <Link to="/meet-our-team">Meet Our Team</Link>
-                <span className='navspans'></span>
-                <Link to="/">Home</Link>
-                <span className='navspans'></span>
-                <Link to="/login">Log-In</Link>
-                <span className='navspans'></span>
-            </nav>
+            <StyledHeader>
+                <h1>WATER MY PLANTS</h1>
+                <nav>
+                    <Link to="/">Home</Link>
+                    <span className='navspans'></span>
+                    <Link to="/meet-our-team">Meet Our Team</Link>
+                    <span className='navspans'></span>
+                    <Link to="/login">Log-In</Link>
+                </nav>
+            </StyledHeader>
                 <EditPlantForm
                     values={formValues}
                     change={inputChange}
@@ -84,4 +88,7 @@ export default function EditPlant() {
     )
 
 }
+const StyledHeader = styled.header`
+  color: ${({ theme }) => theme.secondaryColor};
+`;
 

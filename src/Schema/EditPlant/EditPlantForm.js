@@ -1,19 +1,19 @@
 import React, { useEffect } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import styled from "styled-components";
-import { axiosWithAuth } from "../../axiosWithAuth";
+// import { axiosWithAuth } from "../../axiosWithAuth";
 
 export default function EditPlantForm(props) {
     const { values, change, disabled, errors, setValues } = props;
     const { plantID } = useParams()
     const history = useHistory();
 
-    useEffect(() => {
-        axiosWithAuth()
-            .get(`/api/plants/${plantID}`)
-            .then(res => {setValues(res.data)})
-            .catch(err => {console.log(err)})
-    },[plantID, setValues])
+    // useEffect(() => {
+    //     axiosWithAuth()
+    //         .get(`/api/plants/${plantID}`)
+    //         .then(res => {setValues(res.data)})
+    //         .catch(err => {console.log(err)})
+    // },[plantID, setValues])
     
     const onChange = (event) => {
         const { name, value } = event.target
@@ -21,10 +21,10 @@ export default function EditPlantForm(props) {
         change(name, value)
     }
     const submit = (event) => {
-        history.push('/EditPlantSuccess');
         event.preventDefault();
-        axiosWithAuth().put(`/api/plants/${plantID}`, values)
-            .then(res => {console.log('item edited:', res)})
+        // axiosWithAuth().put(`/api/plants/${plantID}`, values)
+        //     .then(res => {console.log('item edited:', res)})
+            history.push('/EditPlantSuccess');
     }
     return (
         <div className="editPlantForm">
