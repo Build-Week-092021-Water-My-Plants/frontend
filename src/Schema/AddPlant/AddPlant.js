@@ -58,6 +58,7 @@ export default function AddPlant() {
 
     return (
         <StyledAddPlants>
+            <header></header>
             <h1>Add Plant</h1>
             <nav>
                 <Link to="/meet-our-team">Meet Our Team</Link>
@@ -86,5 +87,7 @@ const StyledAddPlants = styled.div`
     justify-content:center;
     align-items:center;
     flex-direction:column;
+
+
 
 `
