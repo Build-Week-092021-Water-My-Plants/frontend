@@ -29,7 +29,7 @@ export default function AddPlant() {
     const updateValues = (formName, formValue) => {
         console.log(formName, formValue);
         validate(formName, formValue);
-        setFormValues({ ...formValues, [formName]: formValue});
+        setFormValues({ ...formValues, [formName]: formValue });
     }
 
     const submitForm = () => {
@@ -41,19 +41,20 @@ export default function AddPlant() {
         }
         setPlantList([ ...plantList, newPlant])
 
+
     }
 
     const validate = (name, value) => {
         yup.reach(schema, name)
-        .validate(value)
-        .then(() => setErrors({ ...errors, [name]: '' }))
-        .catch(err => setErrors({ ...errors, [name]: err.errors[0] }))
-      }
+            .validate(value)
+            .then(() => setErrors({ ...errors, [name]: '' }))
+            .catch(err => setErrors({ ...errors, [name]: err.errors[0] }))
+    }
 
-      useEffect(() => {
+    useEffect(() => {
         schema.isValid(formValues)
-        .then(valid => setDisabled(!valid))
-      }, [formValues])
+            .then(valid => setDisabled(!valid))
+    }, [formValues])
 
 
     return (
@@ -67,15 +68,17 @@ export default function AddPlant() {
                 <Link to="/login">Log-In</Link>
                 <span className='navspans'></span>
             </nav>
-            
-            <AddPlantForm 
-                formValues={formValues} 
-                updateValues={updateValues} 
-                submitForm={submitForm} 
+
+            <AddPlantForm
+                formValues={formValues}
+                updateValues={updateValues}
+                submitForm={submitForm}
                 disabled={disabled}
                 errors={errors}
+
                 />
         </StyledAddPlants>
+
     )
 }
 
