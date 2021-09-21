@@ -46,12 +46,23 @@ const SignupForm = () => {
                     <Link to="/login">LogIn</Link>
                 </nav>
             </StyledHeader>
+// <<<<<<< meetoutteam/rick
+//             <StyledMainPage>
+//                 <StyledChild>
+//                     <section>
+
+//                         <form onSubmit={handleSubmit}>
+//                             <h1>Sign Up</h1>
+//                             <StyledInputs>
+//                                 <label>Username: </label>
+// =======
 
             <StyledChild>
                     <h1>Sign Up</h1>
                     <form onSubmit={handleSubmit}>
                         <div className='inputs'>
                             <label>Username: &nbsp;
+// >>>>>>> main
                                 <input
                                     type='username'
                                     name='username'
