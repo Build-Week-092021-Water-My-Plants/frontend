@@ -19,7 +19,7 @@ const Home = () => {
                     </span>
                 </nav>
             </header>
-            
+
             <div className="whole">
                 <div className="main">
                     <h3> Tired of forgetting to water that thirsty plant ? </h3>

@@ -2,13 +2,12 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import styled from "styled-components";
 import PrivateRoute from "./helpers/PrivateRoute";
-// import LoginPage from "./components/pages/Login/LoginContainer";
-import './App.css';
 import Home from "./components/Home";
 import LoginForm from "./components/LoginForm";
 import SignupForm from "./components/SignupForm";
 import MeetOurTeam from "./components/MeetOurTeam";
 import AddPlant from "./Schema/AddPlant/AddPlant";
+import './App.css';
 
 
 const StyledBody = styled.div`
