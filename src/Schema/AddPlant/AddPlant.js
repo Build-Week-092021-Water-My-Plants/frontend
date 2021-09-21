@@ -82,11 +82,15 @@ export default function AddPlant() {
 }
 
 const StyledAddPlants = styled.div`
+    background-image: url("https://media.istockphoto.com/photos/hand-watering-young-plants-in-growing-picture-id1126962479?b=1&k=20&m=1126962479&s=170667a&w=0&h=Pjzibz8tfGau4ah9dNkZs8wycHCdD0KMgZHr38E7dHg=");
+    background-size: cover;
     background-color: ${prop => prop.theme.secondaryColor};
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
+    width:100%;
+    height:auto;
     border:solid 1px red;
     
     header {
@@ -110,20 +114,4 @@ const StyledAddPlants = styled.div`
         color: white;
     }
 
-    .addPlantForm form {
-        background-color: ${prop => prop.theme.primaryColor};
-        display:flex;
-        flex-direction:column;
-        justify-content:center;
-        align-items:center;
-        border:1px solid ${prop => prop.theme.accentColor};
-        border-radius:10px;
-        height:300px;
-        width:400px;
-        margin:2%;
-    }
-
-    .addPlantForm label {
-        margin: 1%;
-    }
 `

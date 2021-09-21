@@ -35,7 +35,7 @@ const SignupForm = () => {
     }
 
     return (
-        <div className="page">
+        <StyledSignupForm>
             <StyledHeader>
                 <h1>WATER MY PLANTS</h1>
                 <nav>
@@ -46,34 +46,30 @@ const SignupForm = () => {
                     <Link to="/login">Log-In</Link>
                 </nav>
             </StyledHeader>
-            <StyledMainPage>
-                <StyledChild>
-                    <section>
-                        <h1>Sign Up</h1>
-                        <form onSubmit={handleSubmit}>
-                            <StyledInputs>
-                                {/* <label>Username: </label> */}
+            
+            <StyledChild>
+                    <h1>Sign Up</h1>
+                    <form onSubmit={handleSubmit}>
+                        <div className='inputs'>
+                            <label>Username: &nbsp;
                                 <input
                                     type='username'
                                     name='username'
                                     id='username'
                                     value={formValue.username}
                                     onChange={handleChange}
-                                />
-                            </StyledInputs>
-                            <StyledInputs>
-                                <label>Password: </label>
+                                /> 
+                            </label>
+                            <label>Password: &nbsp;
                                 <input
                                     type='password'
                                     name='password'
                                     id='password'
                                     value={formValue.password}
                                     onChange={handleChange}
-                                />
-                            </StyledInputs>
-
-                            <StyledInputs>
-                                <label>PhoneNumber: </label>
+                                /> 
+                            </label>
+                            <label>PhoneNumber: &nbsp;
                                 <input
                                     type='tel'
                                     name='phoneNumber'
@@ -81,44 +77,54 @@ const SignupForm = () => {
                                     value={formValue.phoneNumber}
                                     onChange={handleChange}
                                     placeholder='format=555-666-9999'
-                                />
-                            </StyledInputs>
+                                /> 
+                            </label>
                             <button onSubmit={handleSubmit} >Submit</button>
-
-                        </form>
-                    </section>
-                </StyledChild>
-            </StyledMainPage>
-        </div>
+                        </div>
+                    </form>
+            </StyledChild>
+        </StyledSignupForm>
     )
 }
 
 export default SignupForm;
 
-// const Container = styled.div`
-//     box-sizing: border-box;
-//     height: 100vh;
-//     background: url("https://media.istockphoto.com/photos/hand-watering-young-plants-in-growing-picture-id1126962479?b=1&k=20&m=1126962479&s=170667a&w=0&h=Pjzibz8tfGau4ah9dNkZs8wycHCdD0KMgZHr38E7dHg=");
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     background-position: center;
-// `;
-
+const StyledSignupForm = styled.div`
+    background-image: url("https://media.istockphoto.com/photos/hand-watering-young-plants-in-growing-picture-id1126962479?b=1&k=20&m=1126962479&s=170667a&w=0&h=Pjzibz8tfGau4ah9dNkZs8wycHCdD0KMgZHr38E7dHg=");
+    background-size: cover;
+    width:100%;
+    height: 85.2vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction:column;
+    h1 {
+        color:black;
+        font-size: 3rem;
+    }
+`;
 const StyledHeader = styled.header`
     color: ${({ theme }) => theme.secondaryColor};
-`;
-
-const StyledMainPage = styled.div`
-  background-image: url("https://media.istockphoto.com/photos/hand-watering-young-plants-in-growing-picture-id1126962479?b=1&k=20&m=1126962479&s=170667a&w=0&h=Pjzibz8tfGau4ah9dNkZs8wycHCdD0KMgZHr38E7dHg=");
-  background-size: cover;
-  height: 85.2vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  h1 {
-    margin-top: -2%;
-    font-size: 3rem;
-  }
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    width:100%;
+    // position:absolute;
+    // top: 0px;
+    nav {
+        width:30%;
+    }
+    nav a {
+        border:1px solid ${prop => prop.theme.accentColor};
+        padding:1%;
+        margin:0.2%;
+        color: black;
+        text-decoration:none;
+    }
+    nav a:hover {
+        border:1px solid black;
+        color: white;
+    }
 `;
 
 const StyledChild = styled.div`
@@ -127,20 +133,38 @@ const StyledChild = styled.div`
     background-color: #f2f2f2;
 
     display: flex;
+    flex-direction:column;
     align-items: center;
     justify-content: center;
-    height: 60vh;
-    padding: 0 5%;
-    form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
+    width:50%;
+    height: auto;
+    margin: 1% 1%;
 
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        width:70%;
+        height:auto;
+        margin-top:-3%;
+        margin-bottom:2%;
+    }
+
+    .inputs {
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        padding:2% 2%;
+    }
     input {
-      padding: 8%;
-      border: none;
-      border-radius: 25px;
+        width:auto;
+        height:auto;
+        padding: 3%;
+        margin: 2%;
+        border: none;
+        border-radius: 25px;
     }
   }
 
@@ -156,15 +180,9 @@ const StyledChild = styled.div`
     border: 0px;
     cursor: pointer;
     transition: opacity 0.25s ease-out;
+    margin-top:5%;
   }
   button:hover {
     opacity: 0.85;
   }
 `;
-const StyledInputs = styled.div`
-  margin-top: -5%;
-  padding: 15% 0 15% 0;
-  margin-left: -15%;
-`;
-
-
