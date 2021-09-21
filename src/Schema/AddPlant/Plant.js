@@ -1,20 +1,22 @@
 import React from 'react'
 import styled from 'styled-components';
 
-const Plant = ({details}) => {
-	return (
-		<div>
-			<Plantcard>
-            <div className='plant container'>
-                <h2>{details.nickname}</h2>
-                <p>species: {details.size}</p>
-                <p>h2oInterval: {details.special}</p>
-                <p>imgae: {details.image}</p>
-            </div>
-        </Plantcard>
-		</div>
-	)
+const Plant = ({ details }) => {
+    return (
+        <div>
+            <Plantcard>
+                <div className='plant container'>
+                    <h2>{details.nickname}</h2>
+                    <p>species: {details.size}</p>
+                    <p>h2oInterval: {details.special}</p>
+                    <p>imgae: {details.image}</p>
+                </div>
+            </Plantcard>
+        </div>
+    )
 }
+
+export default Plant
 
 const Plantcard = styled.div`
 .plant {
@@ -29,9 +31,7 @@ const Plantcard = styled.div`
 }
 @media (max-width: 800px) {
 	.plant {
-	  background: rgb(189, 189, 146);
-	  background-color: #E0E1E3;
+    background: rgb(189, 189, 146);
+    background-color: #E0E1E3;
 	}
-`;
-
-export default Plant
+}`;
