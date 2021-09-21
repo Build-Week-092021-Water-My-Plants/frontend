@@ -37,7 +37,7 @@ const SignupForm = () => {
     return (
         <div className="page">
             <StyledHeader>
-                <h1>Water My Plants</h1>
+                <h1>WATER MY PLANTS</h1>
                 <nav>
                     <Link to="/">Home</Link>
                     <span className='navspans'></span>
@@ -122,16 +122,16 @@ const StyledMainPage = styled.div`
 `;
 
 const StyledChild = styled.div`
-  border: 0px;
-  border-radius: 30px;
-  background-color: #f2f2f2;
+    border: 0px;
+    border-radius: 30px;
+    background-color: #f2f2f2;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 60vh;
-  padding: 0 5%;
-  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    padding: 0 5%;
+    form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -143,6 +143,7 @@ const StyledChild = styled.div`
       border-radius: 25px;
     }
   }
+
   button {
     border-radius: 25px;
     width: 80%;
