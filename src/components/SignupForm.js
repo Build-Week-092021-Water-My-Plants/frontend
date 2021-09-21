@@ -49,9 +49,9 @@ const SignupForm = () => {
             <StyledMainPage>
                 <StyledChild>
                     <section>
-                        
+
                         <form onSubmit={handleSubmit}>
-                        <h1>Sign Up</h1>
+                            <h1>Sign Up</h1>
                             <StyledInputs>
                                 <label>Username: </label>
                                 <input
