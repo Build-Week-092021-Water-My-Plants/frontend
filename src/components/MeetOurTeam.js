@@ -159,7 +159,7 @@ const MeetOurTeam = () => {
                     <h2>ADD TEAM MEMBER NAME</h2>
                     <h3>add Role</h3>
                 </div>
-
+{/* 
                 <div className='card'>
                     <img
                         className='card-photo'
@@ -178,7 +178,7 @@ const MeetOurTeam = () => {
                     />
                     <h2>ADD TEAM MEMBER NAME</h2>
                     <h3>add Role</h3>
-                </div>
+                </div> */}
                 {/* TEMPLATE */}
                 {/* <div className='card'>
                     <img
