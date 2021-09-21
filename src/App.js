@@ -8,7 +8,13 @@ import SignupForm from "./components/SignupForm";
 import MeetOurTeam from "./components/MeetOurTeam";
 import AddPlant from "./Schema/AddPlant/AddPlant";
 import AddSuccess from './Schema/AddPlant/AddSuccess';
+import SignUpSuccess from "./components/SignupSuccess";
+import PlantList from "./components/PlantList";
+import EditPlant from "./Schema/EditPlant/EditPlant";
+import EditPlantSuccess from "./Schema/EditPlant/EditPlantSuccess";
 import './App.css';
+
+
 
 
 const StyledBody = styled.div`
@@ -33,7 +39,14 @@ function App() {
           <Switch>
           <Route path='/addsuccess' component={AddSuccess} />
           <Route path='/addPlant' component={AddPlant} />
+          <PrivateRoute path='/SignupSuccess' component={SignUpSuccess} />
+            <Route path='/plantList' component={PlantList} />
+            {/* <PrivateRoute path='/EditPlantSuccess' component={EditPlantSuccess} />
+            <PrivateRoute path='/editPlant' component={EditPlant} /> */}
+          <Route path='/editPlant' component={EditPlant} />
+          <Route path='/editPlantSuccess' component={EditPlantSuccess} />
             <PrivateRoute exact path="/plants"/>
+
             <Route path="/login">
               <LoginForm />
             </Route>
@@ -49,6 +62,7 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
+
           </Switch>
         </StyledBody>
       </div>

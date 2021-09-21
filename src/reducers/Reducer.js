@@ -4,6 +4,9 @@ import {
     EDIT_PLANT,
     LOGIN,
     GET_PLANT,
+    FETCH_START,
+    FETCH_PLANT_SUCCESS,
+    FETCH_FAIL
   } from '../actions/index';
 
 const initialState = {
@@ -24,6 +27,24 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
+        case(FETCH_START):
+        return({
+            ...state, 
+            isFetching: true, 
+            error: ''
+        })
+        case(FETCH_PLANT_SUCCESS):
+        return({
+            ...state, 
+            plant: action.payload,
+            isFetching: false
+        })
+        case (FETCH_FAIL):
+            return({
+                ...state,
+                isFetching: false, 
+                error: action.payload
+            })
         case ADD_PLANT:
             return {
                 ...state,

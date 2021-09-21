@@ -3,11 +3,7 @@ import styled from 'styled-components';
 import axiosWithAuth from '../helpers/axiosWithAuth';
 import { useHistory, Link } from 'react-router-dom';
 
-
-
 const LoginForm = () => {
-    
-    console.log('loginform.js ln:12, props')
     const [formValue, setFormValue] = useState({
         username: '',
         password: '',
