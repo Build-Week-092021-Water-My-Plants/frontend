@@ -41,18 +41,19 @@ const SignupForm = () => {
                 <nav>
                     <Link to="/">Home</Link>
                     <span className='navspans'></span>
-                    <Link to="/meet-our-team">Meet Our Team</Link>
+                    <Link to="/meet-our-team">Meet&nbsp;our&nbsp;Team</Link>
                     <span className='navspans'></span>
-                    <Link to="/login">Log-In</Link>
+                    <Link to="/login">LogIn</Link>
                 </nav>
             </StyledHeader>
             <StyledMainPage>
                 <StyledChild>
                     <section>
-                        <h1>Sign Up</h1>
+                        
                         <form onSubmit={handleSubmit}>
+                        <h1>Sign Up</h1>
                             <StyledInputs>
-                                {/* <label>Username: </label> */}
+                                <label>Username: </label>
                                 <input
                                     type='username'
                                     name='username'
@@ -106,10 +107,13 @@ export default SignupForm;
 
 const StyledHeader = styled.header`
   color: ${({ theme }) => theme.secondaryColor};
+  h1{
+      color: white;
+  }
 `;
 
 const StyledMainPage = styled.div`
-  background-image: url("https://media.istockphoto.com/photos/hand-watering-young-plants-in-growing-picture-id1126962479?b=1&k=20&m=1126962479&s=170667a&w=0&h=Pjzibz8tfGau4ah9dNkZs8wycHCdD0KMgZHr38E7dHg=");
+  background-image: url("https://images.unsplash.com/photo-1565613408901-269f726b44d6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHdhdGVyJTIwcGxhbnRzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
   background-size: cover;
   height: 85.2vh;
   display: flex;
