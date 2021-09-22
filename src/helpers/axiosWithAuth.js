@@ -7,7 +7,7 @@ const axiosWithAuth = () => {
         headers: {
             Authorization: token
         },
-        baseURL: 'http://localhost:5000/CHANGE_ME/'
+        baseURL: 'http://localhost:5000/'
     })
 }
 
