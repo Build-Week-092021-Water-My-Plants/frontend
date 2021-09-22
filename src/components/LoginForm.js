@@ -40,17 +40,22 @@ const handleSubmit = (e) => {
     return (
         <Container> 
         <div>
-            <h1>Log-In</h1>
+            <header>
+            {/* <h1 id='hide'>Log-In</h1> */}
             <nav>
-                <Link to="/meet-our-team">Meet Our Team</Link>
-                <span className='navspans'></span>
-                <Link to="/">Home</Link>
-                <span className='navspans'></span>
-                <Link to="/signup">Sign Up</Link>
-                <span className='navspans'></span>
+                <span className='navspans'>
+                    <Link to="/">Home</Link>
+                </span>
+                <span className='navspans'>
+                    <Link to="/signup">Sign Up</Link>
+                </span>
+                <span className='navspans'>
+                    <Link to="/meet-our-team">Meet Our Team</Link>
+                </span>
             </nav>
+            </header>
         <form>
-
+            <div className='input-container'>
             <label>Username: </label>
                 <input
                 type='username'
@@ -69,7 +74,7 @@ const handleSubmit = (e) => {
                 onChange={handleChange}
                 />
             <button onSubmit={handleSubmit} >Log In</button>
-            
+            </div>
             </form>
         </div>
         </Container>
@@ -79,4 +84,40 @@ const handleSubmit = (e) => {
 export default LoginForm;
 
 
-const Container = styled.div ``;
+const Container = styled.div `
+box-sizing: border-box;
+height: 100vh;
+background: url("");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+
+  nav {
+      display: flex;
+      justify-content: flex-end; 
+      padding: 25px 60px 25px 0; 
+      gap: 15px;
+      border: 1px solid gray; 
+  }
+
+  .input-container {
+      display: flex;
+      flex-direction: column; 
+      justify-content: center;
+      border: 1px solid black; 
+      background-color: gray; 
+      padding: 30px;
+      color: white; 
+      width: 40%; 
+      border-radius: 10px;
+  }
+   button {
+       margin: 5px; 
+       border-radius: 10px;
+   }
+   input{ 
+       border-radius: 10px; 
+       margin: 5px; 
+   }
+  `
+  ;
