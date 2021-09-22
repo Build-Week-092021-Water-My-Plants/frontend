@@ -1,7 +1,52 @@
-# Getting Started with Create React App
+# WATER MY PLANTS
+
+![image](https://media.istockphoto.com/photos/hand-watering-young-plants-in-growing-picture-id1126962479?b=1&k=20&m=1126962479&s=170667a&w=0&h=Pjzibz8tfGau4ah9dNkZs8wycHCdD0KMgZHr38E7dHg=)
+
+- [WATER MY PLANTS](#water-my-plants)
+  - [About](#about)
+  - [Language](#language)
+  - [Contributors](#contributors)
+  - [Fast Instructions fro running this project](#fast-instructions-fro-running-this-project)
+  - [Available Scripts](#available-scripts)
+    - [`npm start`](#npm-start)
+    - [`npm test`](#npm-test)
+    - [`npm run build`](#npm-run-build)
+    - [`npm run eject`](#npm-run-eject)
+  - [Learn More](#learn-more)
+    - [Code Splitting](#code-splitting)
+    - [Analyzing the Bundle Size](#analyzing-the-bundle-size)
+    - [Making a Progressive Web App](#making-a-progressive-web-app)
+    - [Advanced Configuration](#advanced-configuration)
+    - [Deployment](#deployment)
+    - [`npm run build` fails to minify](#npm-run-build-fails-to-minify)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## About
+YOU are a plant lover. But, hate figuring out the pesky watering schedule? Or perhaps your thumb isn't very green? Our app helps you remember how much to water and when to get it right. 
+
+## Language
+We love JavaScript and React makes it easy. We are thrilled with Redux and the reducer pattern as part of our code design. The use of these tools enables follow up developers a base with which to scale up as needed. 
+
+## Contributors
+- Rick Mansfield [Lead Frontend Developer](https://rickmansfield.github.io/PortfolioWRM2021v2/)
+- Sebastian Leal [Full Stack Web Dev & Computer Science Engineer]()
+- Jordan Gearheart [Lead Backend Developer]()
+- Alan Waddell [Frontend Development REACT/SPA's & Design]()
+- Adam Smith [Frontend Development REACT/SPA's & Design]()
+- Abraham Garcia [Frontend Development REACT/SPA's & Design]()
+
+## Fast Instructions fro running this project
+  - You need React and Node.js on your local environment. 
+  - clone project
+  - in terminal ```npm install```
+  - then ```npm start```
+  - find all necesssary imports at the top of each file. Be sure you load...
+    -  npm i Yup
+    -  npm i styled-components
+    -  npm i redux redux-logger, redux-thunk
+    -  npm i axios
+  - Above all Have Fun!
 ## Available Scripts
 
 In the project directory, you can run:
@@ -68,3 +113,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+

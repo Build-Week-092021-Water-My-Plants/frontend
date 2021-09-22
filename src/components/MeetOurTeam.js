@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import styled from "styled-components";
 
+
 const StyledTeam = styled.div`
     box-sizing: border-box;
+    
 
     .whole {
         width: 100%;
@@ -61,6 +63,7 @@ const StyledTeam = styled.div`
 
     header {
         margin-bottom: 2%;
+        
     }
 
     @media (max-width: 500px) {
@@ -85,6 +88,8 @@ const MeetOurTeam = () => {
                 <nav>
                     <span className="navspans"><Link to="/">Home</Link></span>
                     <span className="navspans"><Link to="/meet-our-team">Meet our Team</Link></span>
+                    <span className="navspans"><Link to="/login">Login</Link></span>
+                    <span className="navspans"><Link to="/signup">Sign-up</Link></span>
                 </nav>
             </header>
 
@@ -107,19 +112,60 @@ const MeetOurTeam = () => {
                 <div className='card'>
                     <img
                         className='card-photo'
-                        src=''
-                        alt='profile pic of ADD NAME'
+                        src='https://ca.slack-edge.com/ESZCHB482-U021YSANWNS-186d43f1f01d-512'
+                        alt='profile pic of Jordan Gearheart'
                     />
-                    <h2>ADD TEAM MEMBER NAME</h2>
-                    <h3>add Role</h3>
+                    <h2>Jordan Gearheart</h2>
+                    <h3>Full Stack Developer | Backend Team Lead</h3>
                 </div>
 
                 <div className='card'>
                     <img
                         className='card-photo'
-                        src=''
+                        src='https://ca.slack-edge.com/ESZCHB482-U0225J7RTT4-531a25aebb6f-512'
                         alt='profile pic for ADD NAME'
                     />
+                    <h2>Sebastian Leal </h2>
+                    <h3>Fullstack Web & Computer Science Engineer</h3>
+                </div>
+                
+                <div className='card'>
+                    <img
+                        className='card-photo'
+                        src='https://ca.slack-edge.com/ESZCHB482-U025FD6HPDG-1ea06076331a-512'
+                        alt='profile of ADD NAME'
+                    />
+                    <h2>Alan Waddell </h2>
+                    <h3>Full Stack Developer</h3>
+                </div>
+
+                <div className='card'>
+                    <img
+                        className='card-photo'
+                        src='https://ca.slack-edge.com/ESZCHB482-U025UM0EW4T-9fe7d300bbf6-512'
+                        alt='Abraham'
+                    />
+                    <h2>Abraham Garcia</h2>
+                    <h3>Fullstack Web & Computer Science Engineer</h3>
+                </div>
+
+
+                <div className='card'>
+                    <img
+                        className='card-photo'
+                        src=''
+                        alt='profile of ADD NAME'
+                    />
+                    <h2>ADD TEAM MEMBER NAME</h2>
+                    <h3>add Role</h3>
+                </div>
+{/* 
+                <div className='card'>
+                    <img
+                        className='card-photo'
+                        src=''
+                        alt='profile of ADD NAME'
+                    />
                     <h2>ADD TEAM MEMBER NAME</h2>
                     <h3>add Role</h3>
                 </div>
@@ -132,49 +178,7 @@ const MeetOurTeam = () => {
                     />
                     <h2>ADD TEAM MEMBER NAME</h2>
                     <h3>add Role</h3>
-                </div>
-
-                <div className='card'>
-                    <img
-                        className='card-photo'
-                        src=''
-                        alt='profile of ADD NAME'
-                    />
-                    <h2>ADD TEAM MEMBER NAME</h2>
-                    <h3>add Role</h3>
-                </div>
-
-
-                <div className='card'>
-                    <img
-                        className='card-photo'
-                        src=''
-                        alt='profile of ADD NAME'
-                    />
-                    <h2>ADD TEAM MEMBER NAME</h2>
-                    <h3>add Role</h3>
-                </div>
-
-                <div className='card'>
-                    <img
-                        className='card-photo'
-                        src=''
-                        alt='profile of ADD NAME'
-                    />
-                    <h2>ADD TEAM MEMBER NAME</h2>
-                    <h3>add Role</h3>
-                </div>
-                
-                <div className='card'>
-                <div className='card'>
-                    <img
-                        className='card-photo'
-                        src=''
-                        alt='profile of ADD NAME'
-                    />
-                    <h2>ADD TEAM MEMBER NAME</h2>
-                    <h3>add Role</h3>
-                </div>
+                </div> */}
                 {/* TEMPLATE */}
                 {/* <div className='card'>
                     <img
@@ -185,7 +189,6 @@ const MeetOurTeam = () => {
                     <h2>ADD TEAM MEMBER NAME</h2>
                     <h3>add Role</h3>
                 </div> */}
-                </div>
             </div>
         </div>
     </StyledTeam>

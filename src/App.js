@@ -2,12 +2,20 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import styled from "styled-components";
 import PrivateRoute from "./helpers/PrivateRoute";
-// import LoginPage from "./components/pages/Login/LoginContainer";
-import './App.css';
 import Home from "./components/Home";
 import LoginForm from "./components/LoginForm";
 import SignupForm from "./components/SignupForm";
 import MeetOurTeam from "./components/MeetOurTeam";
+import AddPlant from "./Schema/AddPlant/AddPlant";
+import AddSuccess from './Schema/AddPlant/AddSuccess';
+import SignUpSuccess from "./components/SignupSuccess";
+import PlantList from "./components/PlantList";
+import EditPlant from "./Schema/EditPlant/EditPlant";
+import EditPlantSuccess from "./Schema/EditPlant/EditPlantSuccess";
+import './App.css';
+import Plant from "./Schema/AddPlant/Plant";
+
+
 
 
 const StyledBody = styled.div`
@@ -30,7 +38,14 @@ function App() {
       <div className="App">
         <StyledBody className="App">
           <Switch>
-            <PrivateRoute exact path="/plants"/>
+          <Route path='/addsuccess' component={AddSuccess} />
+          <Route path='/addPlant' component={AddPlant} />
+          <Route path='/SignupSuccess' component={SignUpSuccess} />
+          <Route path='/plantList' component={PlantList} />
+          <Route path='/editPlant' component={EditPlant} />
+          <Route path='/editPlantSuccess' component={EditPlantSuccess} />
+          <Route exact path="/plant" component={ Plant }/>
+
             <Route path="/login">
               <LoginForm />
             </Route>
@@ -46,6 +61,7 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
+
           </Switch>
         </StyledBody>
       </div>

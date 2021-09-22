@@ -12,14 +12,14 @@ const Home = () => {
                         <Link to="/"> Home </Link>
                     </span>
                     <span className="navspans">
-                        <Link to="/plants"> My Plants </Link>
+                        <Link to="/plantList"> My Plants </Link>
                     </span>
                     <span className="navspans">
                         <Link to="/meet-our-team"> Meet Our Team </Link>
                     </span>
                 </nav>
             </header>
-            
+
             <div className="whole">
                 <div className="main">
                     <h3> Tired of forgetting to water that thirsty plant ? </h3>
@@ -66,6 +66,10 @@ const StyledHome = styled.div`
         flex-direction: column;
         margin-top: 10%;
         border: 10px double #284b63;
+    }
+
+    header, h1 {
+        margin: 0 10px;
     }
 
     .main h1 {
