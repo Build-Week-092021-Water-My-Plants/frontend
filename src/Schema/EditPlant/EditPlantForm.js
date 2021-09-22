@@ -27,7 +27,8 @@ export default function EditPlantForm(props) {
             history.push('/EditPlantSuccess');
     }
     return (
-        <div className="editPlantForm">
+        <div>
+        <StyledAddPlantForm>
               <form
                     className="add-plant contatiner"
                     id="add-plant-form"
@@ -35,7 +36,7 @@ export default function EditPlantForm(props) {
                     submit={submit}
                 >
                     <div className="form-group submit">
-                        <h2>Add Plant</h2>
+                        <h2>Edit Plant</h2>
                     </div>
 
                     <label>
@@ -45,7 +46,7 @@ export default function EditPlantForm(props) {
                             type="text"
                             value={values.nickname}
                             onChange={onChange}
-                            placeholder="type your plant name"
+                            placeholder="Plant to Edit?"
                             maxLength="30"
                             id="name-input"
                         />
@@ -74,7 +75,7 @@ export default function EditPlantForm(props) {
                     </label>
 
                     <button id="order-button" disabled={disabled}>
-                        Add Plant
+                        Edit Plant
                     </button>
 
                     <div className="errors">
@@ -84,41 +85,77 @@ export default function EditPlantForm(props) {
                         <div>{errors.h2oAmount}</div>
                     </div>
                     <div>
-                        <Image
-                            src="https://images.unsplash.com/photo-1494537176433-7a3c4ef2046f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGFkZCUyMHBsYW50fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                            alt="plant"
-                        />
+                       
                     </div>
                 </form>
+        </StyledAddPlantForm>
         </div>
     )
 }
 
 
 
-const editPlantForm = styled.div`
-  form {
-    margin: 1%;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: space-between; */
-    align-items: center;
-  }
-  label {
-    margin: 0.25%;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }`;
+const StyledAddPlantForm = styled.div`
+    form {
+        background: rgba( 255, 255, 255, 0.2 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 6px );
+        -webkit-backdrop-filter: blur( 6px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        border-radius:10px;
+        width:400px;
+        margin:2% 0%;
+        padding:2% 2%;
+    }
 
-const Image = styled.img`
-box-sizing: border-box;
-border: 1px solid black;
-margin: 3% ;
-border-radius: 30%;
-max-height: 100%;
-@media (max-width: 768px){
-  max-width: 100%;
-  border-radius: 50%;
-}
-`;
+    .inputs {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        padding: 2%;
+        margin: 1%;
+    }
+
+    input {
+        width:auto;
+        height:auto;
+        padding: 5%;
+        margin: 5%;
+        margin-left: -5%;
+        border: none;
+        border-radius: 25px;
+        text-align:center;
+    }
+
+    button {
+        width: 80%;
+        height: 40px;
+        font-size: 1.3rem;
+        color: white;
+        font-weight: 700;
+        border: 0px;
+        cursor: pointer;
+        transition: opacity 0.25s ease-out;
+        margin-top:5%;
+        border-radius: 10px;
+      }
+
+      button:hover {
+        opacity: 0.85;
+        color: black;
+        background: rgba( 169, 251, 163, 0.2 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 6px );
+        -webkit-backdrop-filter: blur( 6px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        transition: 0.3s;
+        
+      }
+`
