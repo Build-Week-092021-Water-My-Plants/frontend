@@ -19,7 +19,7 @@ import Plant from "./Schema/AddPlant/Plant";
 
 
 const StyledBody = styled.div`
-  background-color: ${({ theme }) => theme.secondaryColor};
+background-color: ${({ theme }) => theme.secondaryColor};
   header {
     background-color: ${({ theme }) => theme.primaryColor};
   }
