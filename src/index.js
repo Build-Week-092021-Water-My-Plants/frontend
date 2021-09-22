@@ -11,6 +11,12 @@ import reducer from "./reducers/Reducer"
 import { BrowserRouter as Router } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 
+// MOCKS+++++++++++++++++
+const { worker } = require("../src/mocks/browser.js");
+
+worker.start();
+// MOCKS for testing+++++++++++++++++++
+
 const theme =
 {
 
