@@ -63,10 +63,12 @@ export default function EditPlant() {
 
 
     return (
+       
         <div>
             <div>
-            <StyledHeader>
-                <h1>WATER MY PLANTS</h1>
+            <StyledNav>
+                <div className="navBar">
+                <h1 className="title">WATER MY PLANTS</h1>
                 <nav>
                     <Link to="/">Home</Link>
                     <span className='navspans'></span>
@@ -74,7 +76,9 @@ export default function EditPlant() {
                     <span className='navspans'></span>
                     <Link to="/login">Log-In</Link>
                 </nav>
-            </StyledHeader>
+                </div>
+            </StyledNav>
+                <StyledEditPlants>
                 <EditPlantForm
                     values={formValues}
                     change={inputChange}
@@ -83,12 +87,53 @@ export default function EditPlant() {
                     errors={formErrors}
                     setValues={setFormValues}
                 />
+                </StyledEditPlants>
             </div>
         </div>
+            
     )
-
 }
-const StyledHeader = styled.header`
-  color: ${({ theme }) => theme.secondaryColor};
-`;
+
+const StyledEditPlants = styled.div`
+    box-sizing: border-box;
+    background: url("https://media.istockphoto.com/photos/hand-watering-young-plants-in-growing-picture-id1126962479?b=1&k=20&m=1126962479&s=170667a&w=0&h=Pjzibz8tfGau4ah9dNkZs8wycHCdD0KMgZHr38E7dHg=");
+    background-size: cover;
+    width:auto;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+`
+const StyledNav = styled.div`
+    .navBar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 5%;
+    }
+
+    .navBar .title {
+        color: white;
+    }
+
+    nav {
+        width:30%;
+        display: flex;
+        
+    }
+
+    nav a {
+        border:1px solid ${prop => prop.theme.accentColor};
+        padding:1%;
+        margin:0.2%;
+        color: black;
+        text-decoration:none;
+    }
+
+    nav a:hover {
+        border:1px solid black;
+        color: white;
+    }
+
+`
 
