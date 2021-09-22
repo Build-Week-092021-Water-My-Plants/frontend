@@ -32,9 +32,9 @@ We love JavaScript and React makes it easy. We are thrilled with Redux and the r
 - Rick Mansfield [Lead Frontend Developer](https://rickmansfield.github.io/PortfolioWRM2021v2/)
 - Sebastian Leal [Full Stack Web Dev & Computer Science Engineer]()
 - Jordan Gearheart [Lead Backend Developer]()
-- Alan Waddell [Frontend Developmnet REACT/SPA's & Design]()
-- Adam Smith [Frontend Developmnet REACT/SPA's & Design]()
-- Abraham Garcia [Frontend Developmnet REACT/SPA's & Design]()
+- Alan Waddell [Frontend Development REACT/SPA's & Design]()
+- Adam Smith [Frontend Development REACT/SPA's & Design]()
+- Abraham Garcia [Frontend Development REACT/SPA's & Design]()
 
 ## Fast Instructions fro running this project
   - You need React and Node.js on your local environment. 
