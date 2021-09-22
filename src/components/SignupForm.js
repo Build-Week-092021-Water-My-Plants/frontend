@@ -94,15 +94,16 @@ export default SignupForm;
 const StyledSignupForm = styled.div`
   background-image: url("https://media.istockphoto.com/photos/hand-watering-young-plants-in-growing-picture-id1126962479?b=1&k=20&m=1126962479&s=170667a&w=0&h=Pjzibz8tfGau4ah9dNkZs8wycHCdD0KMgZHr38E7dHg=");
   background-size: cover;
+  box-sizing:border-box;
   width: 100%;
-  height: 85.2vh;
+  height: 100vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   h1 {
     color: black;
-    font-size: 3rem;
+    font-size: 2rem;
   }
 `;
 const StyledHeader = styled.header`
@@ -111,8 +112,7 @@ const StyledHeader = styled.header`
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  // position:absolute;
-  // top: 0px;
+  height: 6%;
   nav {
     width: 30%;
   }
@@ -128,8 +128,7 @@ const StyledHeader = styled.header`
     color: white;
   }
 
-  // const Container = styled.div
-`;
+// const Container = styled.div
 //     box-sizing: border-box;
 //     height: 100vh;
 //     background: url("https://media.istockphoto.com/photos/hand-watering-young-plants-in-growing-picture-id1126962479?b=1&k=20&m=1126962479&s=170667a&w=0&h=Pjzibz8tfGau4ah9dNkZs8wycHCdD0KMgZHr38E7dHg=");
