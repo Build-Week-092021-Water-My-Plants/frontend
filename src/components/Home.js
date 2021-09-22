@@ -65,7 +65,7 @@ const StyledHome = styled.div`
         display: flex;
         flex-direction: column;
         margin-top: 10%;
-        border: 10px solid rgb(66, 126, 54, .5);
+        border: none;
     }
 
     header, h1 {
