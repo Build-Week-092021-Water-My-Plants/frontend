@@ -153,11 +153,11 @@ const MeetOurTeam = () => {
                 <div className='card'>
                     <img
                         className='card-photo'
-                        src=''
-                        alt='profile of ADD NAME'
+                        src='https://ca.slack-edge.com/ESZCHB482-U02515419TL-cc9d6539a5a0-512'
+                        alt='Adam Smith'
                     />
-                    <h2>ADD TEAM MEMBER NAME</h2>
-                    <h3>add Role</h3>
+                    <h2>Adam Smith</h2>
+                    <h3>Fullstack Web & Computer Science Engineer</h3>
                 </div>
 {/* 
                 <div className='card'>
