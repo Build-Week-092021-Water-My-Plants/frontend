@@ -1,22 +1,27 @@
 import React from 'react'
 import styled from 'styled-components';
 
-const Plant = ({ details }) => {
+const Plant = ({details}) => {
     return (
         <div>
-            <Plantcard>
-                <div className='plant container'>
-                    <h2>{details.nickname}</h2>
-                    <p>species: {details.size}</p>
+            <h1>I am a Plant</h1>
+
+            <div>
+
+                <Plantcard>
+                    <div className='plant container'>
+                        <h2>{details.nickname}</h2>
+                       <p>species: {details.size}</p>
                     <p>h2oInterval: {details.special}</p>
                     <p>imgae: {details.image}</p>
-                </div>
-            </Plantcard>
+                    </div>
+                </Plantcard>
+            </div>
         </div>
     )
 }
 
-export default Plant
+export default Plant;
 
 const Plantcard = styled.div`
 .plant {

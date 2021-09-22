@@ -12,7 +12,7 @@ const Home = () => {
                         <Link to="/"> Home </Link>
                     </span>
                     <span className="navspans">
-                        <Link to="/plants"> My Plants </Link>
+                        <Link to="/plantList"> My Plants </Link>
                     </span>
                     <span className="navspans">
                         <Link to="/meet-our-team"> Meet Our Team </Link>
