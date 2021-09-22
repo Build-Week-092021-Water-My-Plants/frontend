@@ -61,11 +61,8 @@ export default function AddPlant() {
             <header>
                 <h1>Add Plant</h1>
                 <nav>
-                    {/* <span className='navspans'></span> */}
                     <Link to="/">Home</Link>
-                    {/* <span className='navspans'></span> */}
                     <Link to="/login">Log-In</Link>
-                    {/* <span className='navspans'></span> */}
                     <Link to="/meet-our-team">Meet Our Team</Link>
                 </nav>
             </header>
@@ -98,6 +95,7 @@ const StyledAddPlants = styled.div`
         justify-content:space-around;
         align-items:center;
         width:100%;
+        height:6%;
     }
     nav {
         width:30%;
