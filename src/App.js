@@ -7,12 +7,13 @@ import LoginForm from "./components/LoginForm";
 import SignupForm from "./components/SignupForm";
 import MeetOurTeam from "./components/MeetOurTeam";
 import AddPlant from "./Schema/AddPlant/AddPlant";
-import AddSuccess from "./Schema/AddPlant/AddSuccess";
+import AddSuccess from './Schema/AddPlant/AddSuccess';
 import SignUpSuccess from "./components/SignupSuccess";
 import PlantList from "./components/PlantList";
 import EditPlant from "./Schema/EditPlant/EditPlant";
 import EditPlantSuccess from "./Schema/EditPlant/EditPlantSuccess";
 import './App.css';
+import Plant from "./Schema/AddPlant/Plant";
 
 
 
@@ -37,17 +38,13 @@ function App() {
       <div className="App">
         <StyledBody className="App">
           <Switch>
-
-          <PrivateRoute path='/SignupSuccess' component={SignUpSuccess} />
-            <PrivateRoute path='/AddSuccess' component={AddSuccess} />
-            <PrivateRoute path='/addPlant' component={AddPlant} />
-            <Route path='/plantList' component={PlantList} />
-            {/* <PrivateRoute path='/EditPlantSuccess' component={EditPlantSuccess} />
-            <PrivateRoute path='/editPlant' component={EditPlant} /> */}
+          <Route path='/addsuccess' component={AddSuccess} />
+          <Route path='/addPlant' component={AddPlant} />
+          <Route path='/SignupSuccess' component={SignUpSuccess} />
+          <Route path='/plantList' component={PlantList} />
           <Route path='/editPlant' component={EditPlant} />
           <Route path='/editPlantSuccess' component={EditPlantSuccess} />
-          
-            <PrivateRoute exact path="/plants"/>
+          <Route exact path="/plant" component={ Plant }/>
 
             <Route path="/login">
               <LoginForm />

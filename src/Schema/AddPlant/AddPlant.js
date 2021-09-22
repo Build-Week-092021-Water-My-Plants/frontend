@@ -58,16 +58,14 @@ export default function AddPlant() {
 
     return (
         <StyledAddPlants>
-            <header></header>
-            <h1>Add Plant</h1>
-            <nav>
-                <Link to="/meet-our-team">Meet Our Team</Link>
-                <span className='navspans'></span>
-                <Link to="/">Home</Link>
-                <span className='navspans'></span>
-                <Link to="/login">Log-In</Link>
-                <span className='navspans'></span>
-            </nav>
+            <header>
+                <h1>Add Plant</h1>
+                <nav>
+                    <Link to="/">Home</Link>
+                    <Link to="/login">Log-In</Link>
+                    <Link to="/meet-our-team">Meet Our Team</Link>
+                </nav>
+            </header>
 
             <AddPlantForm
                 formValues={formValues}
@@ -81,13 +79,37 @@ export default function AddPlant() {
 }
 
 const StyledAddPlants = styled.div`
-    background-color: crimson;
-
+    background-image: url("https://media.istockphoto.com/photos/hand-watering-young-plants-in-growing-picture-id1126962479?b=1&k=20&m=1126962479&s=170667a&w=0&h=Pjzibz8tfGau4ah9dNkZs8wycHCdD0KMgZHr38E7dHg=");
+    background-size: cover;
+    background-color: ${prop => prop.theme.secondaryColor};
     display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
-    flex-direction:column;
-
-
+    width:100%;
+    height:auto;
+    border:solid 1px red;
+    
+    header {
+        display:flex;
+        justify-content:space-around;
+        align-items:center;
+        width:100%;
+        height:6%;
+    }
+    nav {
+        width:30%;
+    }
+    nav a {
+        border:1px solid ${prop => prop.theme.accentColor};
+        padding:1%;
+        margin:0.2%;
+        color: black;
+        text-decoration:none;
+    }
+    nav a:hover {
+        border:1px solid black;
+        color: white;
+    }
 
 `
