@@ -27,13 +27,8 @@ export default function EditPlantForm(props) {
     }
     return (
         <div>
-<<<<<<< HEAD
-            <StyledAddPlantForm>
-                <form
-=======
         <StyledEditPlantForm>
               <form
->>>>>>> 47ffd87e56064853dfeba8a298c81378d8898b64
                     className="add-plant contatiner"
                     id="add-plant-form"
                     onChange={onChange}
@@ -101,11 +96,7 @@ export default function EditPlantForm(props) {
                     <div>
                     </div>
                 </form>
-<<<<<<< HEAD
-            </StyledAddPlantForm>
-=======
         </StyledEditPlantForm>
->>>>>>> 47ffd87e56064853dfeba8a298c81378d8898b64
         </div>
     )
 }
