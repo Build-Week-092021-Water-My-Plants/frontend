@@ -214,7 +214,7 @@ const StyledNav = styled.div`
 //     margin-left: 25%;
 //     margin-top: 10%;
 
-//     form {
+    form {
 // >>>>>>> main
         display: flex;
         justify-content: space-between;
