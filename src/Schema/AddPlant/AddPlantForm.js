@@ -9,6 +9,7 @@ export default function AddPlantForm(props) {
 
     const onSubmit = (evt) => {
         evt.preventDefault();
+        console.log('AddPlantForm.js ln:12 props', props);
         submitForm();
         history.push("/addsuccess");
     }
@@ -33,7 +34,7 @@ export default function AddPlantForm(props) {
                             onChange={onChange}
                         />
                     </label>
-                    <label>
+                    {/* <label>
                         <input 
                             type="text"
                             name="species"
@@ -41,7 +42,17 @@ export default function AddPlantForm(props) {
                             value={formValues.species}
                             onChange={onChange}
                         />
+                    </label> */}
+                    <label>
+                        <input
+                            type="text"
+                            name="h2oInterval"
+                            placeholder="Daily, Weekly, Monthly etc."
+                            value={formValues.h2oInterval}
+                            onChange={onChange}
+                        />
                     </label>
+
                     <label>
                         <input 
                             type="text"
@@ -65,8 +76,8 @@ export default function AddPlantForm(props) {
                         <div className="nicknameError">
                             {errors.nickname}
                         </div>
-                        <div className="speciesError">
-                            {errors.species}
+                        <div className="Error">
+                            {errors.h2oInterval}
                         </div>
                         <div className="h2oError">
                             {errors.h2oFrequency}
