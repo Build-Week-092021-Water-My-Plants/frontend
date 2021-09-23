@@ -100,7 +100,7 @@ const StyledAddPlantForm = styled.div`
         justify-content:center;
         align-items:center;
         border:1px solid ${prop => prop.theme.accentColor};
-        border-radius:10px;
+        border-radius:20px;
         width:400px;
         height:300px;
         margin:2% 0%;
