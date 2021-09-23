@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import styled from 'styled-components';
 
 export default function AddPlantForm(props) {
+    console.log('AddPlantForm.js ln:6');
     const { formValues, updateValues, submitForm, disabled, errors } = props;
 
     const history = useHistory();
@@ -17,6 +18,8 @@ export default function AddPlantForm(props) {
     const onChange = (evt) => {
         const { name, value } = evt.target;
         updateValues(name, value);
+        // console.log('AddPlantForm.js ln:21 onChange', value);
+
     }
 
 
@@ -55,9 +58,9 @@ export default function AddPlantForm(props) {
 
                     <label>
                         <input 
-                            type="text"
+                            type="number"
                             name="h2oFrequency"
-                            placeholder="h2oFrequency"
+                            placeholder="Water Freq No."
                             value={formValues.h2oFrequency}
                             onChange={onChange}
                         />

@@ -35,6 +35,7 @@ const LoginForm = (props) => {
                     console.log('Login.js ln:31 res.data', res.data);
                     // console.log('Login.js ln:32 res.data', res.data.payload);
                     localStorage.setItem("token", res.data.payload);
+                    localStorage.setItem("user_id", res.data.user_id)
                     props.login(res.data.user_id);
                     push('plantList');
                     setError("");
@@ -88,60 +89,8 @@ const LoginForm = (props) => {
             </div>
     )
 }
-        
-//         <Container>
-//             <div>
-//                 <StyledHeader>
-//                     <h1 id='hide'>Log-In</h1>
-//                     <nav>
-//                         <Link to="/">Home</Link>
-//                         <Link to="/signup">Sign Up</Link>
-//                         <Link to="/meet-our-team">Meet Our Team</Link>
-//                     </nav>
-//                 </StyledHeader>
-//                 <StyledChild>
-
-//                     <form onSubmit={handleSubmit}>
-//                         <div className='input-container'>
-//                             <label>Username: </label>
-//                             <input
-//                                 type='username'
-//                                 name='username'
-//                                 id='username'
-//                                 value={credentials.username}
-//                                 onChange={handleChange}
-//                             />
-
-//                             <label>Password: </label>
-//                             <input
-//                                 type='password'
-//                                 name='password'
-//                                 id='password'
-//                                 value={credentials.password}
-//                                 onChange={handleChange}
-//                             />
-
-//                             <label>Phone number: </label>
-//                             <input
-//                                 type="tel"
-//                                 name="phoneNumber"
-//                                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-//                                 placeholder="format=555-666-9999"
-//                                 value={credentials.phone_number}
-//                                 onChange={handleChange}
-//                             />
-//                             <button >Log In</button>
-//                         </div>
-//                     </form>
-//                 </StyledChild>
-//                 <p id="error" className="error">{error}</p>
-//             </div>
-//         </Container>
-// >>>>>>> main
-
 // export default LoginForm;
 export default connect (null, {login})(LoginForm);
-
 
 const StyledEditPlants = styled.div`
     box-sizing: border-box;

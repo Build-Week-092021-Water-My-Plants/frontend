@@ -7,7 +7,7 @@ const SignupForm = () => {
     const [formValue, setFormValue] = useState({
         username: "",
         password: "",
-        phoneNumber: "",
+        phone_number: "",
     });
     const { push } = useHistory();
 
@@ -20,14 +20,13 @@ const SignupForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        SignupForm(formValue);
+        // SignupForm(formValue);
+        console.log('SignupForm.js ln:24 formValues', formValue);
         axios
-            .post("/", formValue)
+            .post("https://waterplantsbackend.herokuapp.com/api/auth/register", formValue)
             .then((res) => {
-                console.log("loginform ln:28 response.data", res.data);
-                console.log("loginform ln:29 response.data.token", res.data.token);
-                // localStorage.setItem('token', payload)
-                push("/");
+                console.log("SignupFrom.js ln:28 response.data", res.data);
+                push("/plantList");
             })
             // setAuth(true);
             .catch((err) => console.log(err));
@@ -73,15 +72,14 @@ const SignupForm = () => {
                             />
                         </label>
                         <label>
-                            {/* PhoneNumber: &nbsp; */}
                             <input
                                 type="tel"
-                                name="phoneNumber"
+                                name="phone_number"
                                 placeholder="Phone"
-                                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                                value={formValue.phoneNumber}
+                                // pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                value={formValue.phone_number}
                                 onChange={handleChange}
-                                placeholder="format=555-666-9999"
+                                placeholder="format=5556669999"
                             />
                         </label>
                         <button onSubmit={handleSubmit}>Submit</button>
