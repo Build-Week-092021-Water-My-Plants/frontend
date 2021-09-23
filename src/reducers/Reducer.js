@@ -19,6 +19,7 @@ const initialState = {
         id: null,
         nickname: '',
         species: '',
+        // h2oInterval: '',
         h2oFrequency: '',
         image: ''
     },
