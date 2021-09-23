@@ -12,16 +12,16 @@ const PlantList = (props) => {
     const [plants, setPlants] = useState([]);
     const history = useHistory();
 
-    // useEffect(() => {
-    //     props.getPlants();
-    // }, []);
+    useEffect(() => {
+        props.getPlants(setPlants);
+    }, []);
 
-    // if (isFetching) {
-    //     return <h2>Fetching Plant Stand By...</h2>;
-    // }
-    // if (error) {
-    //     return <h2>Error: {error}</h2>;
-    // }
+    if (isFetching) {
+        return <h2>Fetching Plant Stand By...</h2>;
+    }
+    if (error) {
+        return <h2>Error: {error}</h2>;
+    }
 
     // const deletePlant = (id) => {
     //     setPlants(plants.filter((plant) => plant.id !== id));

@@ -1,76 +1,84 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import axiosWithAuth from '../helpers/axiosWithAuth';
+import axios from 'axios';
 import { useHistory, Link } from 'react-router-dom';
 
-const LoginForm = () => {
-    const [formValue, setFormValue] = useState({
-        username: '',
-        password: '',
-    });
-    // const { setAuth, login } = props;
+const LoginForm = (props) => {
+    console.log('Login.js ln:5 props', props);
+    const [credentials, setCredentials] = useState(
+        {
+            username: "",
+            password: ""
+        }
+    )
+    const [error, setError] = useState("");
     const { push } = useHistory();
 
-const handleChange = (e) => {
-    setFormValue({
-        ...formValue,
-        [e.target.name]: e.target.value,
-    });
-};
+    const handleChange = e => {
+        setCredentials({
+            ...credentials,
+            [e.target.name]: e.target.value
+        });
+    };
 
-const handleSubmit = (e) => {
-    e.preventDefault();
-    LoginForm(formValue);
-    axiosWithAuth()
-    .post('/login', formValue)
-    .then((res)=> {
-        console.log('loginform ln:30 response.data', res.data)
-        console.log('loginform ln:31 response.data.token', res.data.token)
-        // localStorage.setItem('token', payload)
-        push('/plantList')
-    })
-    // setAuth(true);
-    .catch((err) => console.log(err))
-}
+    const handleSubmit = e => {
+        e.preventDefault();
+        if (!credentials.username || !credentials.password) {
+            return (setError("Username or Password not valid."))
+        } else {
+            axios.post('https://waterplantsbackend.herokuapp.com/api/auth/login', credentials)
+                .then(res => {
+                    console.log('Login.js ln:30 res', res);//Use Lambda School to test
+                    console.log('Login.js ln:31 res.data', res.data);
+                    console.log('Login.js ln:32 res.data', res.data.payload);
+                    localStorage.setItem("token", res.data.payload);
+                    push('plantList');
+                    setError("");
+                })
+                .catch(err => {
+                    setError("Error logging in");
+                })
+        }
+    }
 
     return (
-        <Container> 
-        <div>
-            <StyledHeader>
-            <h1 id='hide'>Log-In</h1>
-            <nav>
-                    <Link to="/">Home</Link>
-                
-                    <Link to="/signup">Sign Up</Link>
-                
-                
-                    <Link to="/meet-our-team">Meet Our Team</Link>
-                
-            </nav>
+        <Container>
+            <div>
+                <StyledHeader>
+                    <h1 id='hide'>Log-In</h1>
+                    <nav>
+                        <Link to="/">Home</Link>
+                        <Link to="/signup">Sign Up</Link>
+                        <Link to="/meet-our-team">Meet Our Team</Link>
+                    </nav>
                 </StyledHeader>
                 <StyledChild>
-        <form>
-            <label>Username: </label>
-                <input
-                type='username'
-                name='username'
-                id='username'
-                value={formValue.username}
-                onChange={handleChange}
-                />
 
-            <label>Password: </label>
-                <input
-                type='password'
-                name='password'
-                id='password'
-                value={formValue.password}
-                onChange={handleChange}
-                />
-            <button onSubmit={handleSubmit} >Log In</button>
-            </form>
-            </StyledChild>
-        </div>
+                    <form onSubmit={handleSubmit}>
+                        <div className='input-container'>
+                            <label>Username: </label>
+                            <input
+                                type='username'
+                                name='username'
+                                id='username'
+                                value={credentials.username}
+                                onChange={handleChange}
+                            />
+
+                            <label>Password: </label>
+                            <input
+                                type='password'
+                                name='password'
+                                id='password'
+                                value={credentials.password}
+                                onChange={handleChange}
+                            />
+                            <button >Log In</button>
+                        </div>
+                    </form>
+                </StyledChild>
+                <p id="error" className="error">{error}</p>
+            </div>
         </Container>
     )
 }
@@ -90,7 +98,7 @@ const StyledEditPlants = styled.div`
     padding-top: 5%;
 `        
 
-const Container = styled.div `
+const Container = styled.div`
   background-image: url("https://media.istockphoto.com/photos/hand-watering-young-plants-in-growing-picture-id1126962479?b=1&k=20&m=1126962479&s=170667a&w=0&h=Pjzibz8tfGau4ah9dNkZs8wycHCdD0KMgZHr38E7dHg=");
   background-size: cover;
   box-sizing:border-box;
@@ -128,7 +136,7 @@ const StyledHeader = styled.header`
     color: white;
   }`;
 
-  const StyledChild = styled.div`
+const StyledChild = styled.div`
     border: 0px;
     border-radius: 30px;
     background-color: rgb(242, 242, 242, .8);

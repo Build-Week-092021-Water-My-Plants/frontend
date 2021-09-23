@@ -13,9 +13,10 @@ const initialFormValues = {
 
 const initialFormErrors = {
     nickname: "",
-    species: "",
-    h2oInterval: "",
-    image: "",
+    // species: "",
+    h2oInterval: 0,
+    h2oAmount: "",
+    // image: "",
 };
 
 const plantList = [];

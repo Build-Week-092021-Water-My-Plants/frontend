@@ -17,7 +17,6 @@ export default function EditPlantForm(props) {
     
     const onChange = (event) => {
         const { name, value } = event.target
-
         change(name, value)
     }
     const submit = (event) => {
@@ -85,7 +84,6 @@ export default function EditPlantForm(props) {
                         <div>{errors.h2oAmount}</div>
                     </div>
                     <div>
-                       
                     </div>
                 </form>
         </StyledEditPlantForm>
