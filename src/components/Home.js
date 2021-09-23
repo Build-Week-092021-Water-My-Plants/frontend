@@ -72,6 +72,10 @@ const StyledHome = styled.div`
         margin: 0 10px;
     }
 
+    nav {
+        white-space:nowrap;
+    }
+
     .main h1 {
         margin: 0 auto;
         font-size: 60px;
