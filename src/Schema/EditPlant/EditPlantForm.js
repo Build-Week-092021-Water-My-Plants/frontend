@@ -14,7 +14,7 @@ export default function EditPlantForm(props) {
     //         .then(res => {setValues(res.data)})
     //         .catch(err => {console.log(err)})
     // },[plantID, setValues])
-    
+
     const onChange = (event) => {
         const { name, value } = event.target
         change(name, value)
@@ -23,7 +23,7 @@ export default function EditPlantForm(props) {
         event.preventDefault();
         // axiosWithAuth().put(`/api/plants/${plantID}`, values)
         //     .then(res => {console.log('item edited:', res)})
-            history.push('/EditPlantSuccess');
+        history.push('/EditPlantSuccess');
     }
     return (
         <div>
@@ -50,8 +50,8 @@ export default function EditPlantForm(props) {
                             id="name-input"
                         />
                     </label>
-                    
-                    <label>
+
+                    {/* <label>
                         h2oInterval:
                         <input
                             name="h2oInterval"
@@ -59,6 +59,16 @@ export default function EditPlantForm(props) {
                             type="number"
                             onChange={onChange}
                             placeholder="number times per month"
+                        />
+                    </label> */}
+                    <label>
+                        Species
+                        <input
+                            type="text"
+                            name="species"
+                            placeholder="Species"
+                            value={values.species}
+                            onChange={onChange}
                         />
                     </label>
 
@@ -80,7 +90,7 @@ export default function EditPlantForm(props) {
                     <div className="errors">
                         <div>{errors.nickname}</div>
                         {/* <div>{errors.species}</div> */}
-                        <div>{errors.h2oInterval}</div>
+                        <div>{errors.species}</div>
                         <div>{errors.h2oAmount}</div>
                     </div>
                     <div>

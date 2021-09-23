@@ -8,17 +8,17 @@ import styled from 'styled-components';
 
 const initialValues = {
     nickname: '',
-    h2oInterval: "",
-    h2oAmount: ''
-    // species: '',
+    // h2oInterval: "",
+    h2oAmount: '',
+    species: '',
     // image: ''
 }
 
 const initialErrors = {
     nickname: '',
-    h2oInterval: "",
-    h2oFrequency: ''
-    // species: '',
+    // h2oInterval: "",
+    h2oFrequency: '',
+    species: '',
 }
 
 const initialPlantList = [];
@@ -85,10 +85,11 @@ export default function AddPlant() {
     const submitForm = () => {
         const newPlant = {
             nickname: '',
-            h2oInterval: "",
+            // h2oInterval: "",
             h2oFrequency: '',
-            // species: '',
+            species: '',
             // image: ''
+            
         }
         postNewPlant(newPlant);
 
