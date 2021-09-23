@@ -40,7 +40,7 @@ const SignupForm = () => {
     return (
         <StyledSignupForm>
             <StyledHeader>
-                <h1>WATER MY PLANTS</h1>
+                    <h1>WATER MY PLANTS</h1>
                 <nav>
                     <Link to="/">Home</Link>
                     <span className="navspans"></span>
@@ -105,11 +105,47 @@ const StyledSignupForm = styled.div`
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  font-size: 1.3rem;
   h1 {
     color: black;
     font-size: 2rem;
   }
-`;
+  //MEDIA QUERY SECTION
+
+  @media (max-width: 800px) {
+    font-size: 1rem;
+      h1 {
+          color:${({ theme }) => theme.accentColor};
+          font-size:1.5rem;
+      }
+      header {
+          height:4%;
+          justify-content:space-evenly;
+      }
+      nav {
+          width: 100%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      font-size: 0.9rem;
+      h1 {
+          color:yellow;
+          font-size:1.9rem;
+      }
+      header {
+          height:auto;
+          display:flex;
+          justify-content:center;
+          align-items:center;
+          flex-direction:column;
+      }
+      nav {
+          width: 50%;
+      }
+  }
+`;//SignupForm END
+
 const StyledHeader = styled.header`
   color: ${({ theme }) => theme.secondaryColor};
   display: flex;
@@ -131,34 +167,7 @@ const StyledHeader = styled.header`
     border: 1px solid black;
     color: white;
   }
-
-// const Container = styled.div
-//     box-sizing: border-box;
-//     height: 100vh;
-//     background: url("https://media.istockphoto.com/photos/hand-watering-young-plants-in-growing-picture-id1126962479?b=1&k=20&m=1126962479&s=170667a&w=0&h=Pjzibz8tfGau4ah9dNkZs8wycHCdD0KMgZHr38E7dHg=");
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     background-position: center;
-// `;
-
-// const StyledHeader = styled.header`
-//   color: ${({ theme }) => theme.secondaryColor};
-//   h1{
-//       color: white;
-//   }
-// `;
-
-// const StyledMainPage = styled.div`
-//   background-image: url("https://images.unsplash.com/photo-1565613408901-269f726b44d6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHdhdGVyJTIwcGxhbnRzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
-//   background-size: cover;
-//   height: 85.2vh;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   h1 {
-//     margin-top: -2%;
-//     font-size: 3rem;
-//   }
+`;//StyledHeader END
 
 const StyledChild = styled.div`
     border: 0px;
@@ -170,7 +179,7 @@ const StyledChild = styled.div`
     justify-content: center;
     width:50%;
     height: auto;
-    margin: 1% 1%;
+    margin: 10% 1%;
 
     form {
         display: flex;
@@ -216,4 +225,5 @@ const StyledChild = styled.div`
     }
     button:hover {
         opacity: 0.85;
-    }`;
+    }
+`;//StyledChild END

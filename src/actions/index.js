@@ -1,4 +1,4 @@
-import axiosWithAuth from "../helpers/axiosWithAuth";
+import axiosWithAuth from '../helpers/axiosWithAuth';
 export const ADD_PLANT = 'ADD_PLANT';
 export const NEW_USER = 'NEW_USER';
 export const EDIT_PLANT = 'EDIT_PLANT';
@@ -8,10 +8,11 @@ export const FETCH_START = "FETCH_START";
 export const FETCH_PLANT_SUCCESS = "FETCH_PLANT_SUCCESS ";
 export const FETCH_FAIL = "FETCH_FAI";
 
+
 export const getPlants = () => {
   return (dispatch) => {
-    dispatchEvent(fetchStart());
-    axiosWithAuth.get('plants')
+    dispatch(fetchStart());
+    axiosWithAuth().get('plants')
       .then(res => {
         console.log('actions/index.js ln:15 res.data');
         dispatch(fetchPlantSuccess(res.data.message))
@@ -45,6 +46,6 @@ export const edit = (edited) => {
   return { type: EDIT_PLANT, payload: edited };
 };
 
-export const login = (loginSuccess) => {
-  return { type: LOGIN, payload: loginSuccess };
+export const login = (userID) => {
+  return { type: LOGIN, payload: userID };
 };

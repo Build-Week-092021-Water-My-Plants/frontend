@@ -7,15 +7,16 @@ import styled from "styled-components";
 
 const initialFormValues = {
     nickname: "",
-    h2oInterval: 0,
+    species: "",
     h2oAmount: "",
 };
 
 const initialFormErrors = {
     nickname: "",
     species: "",
-    h2oInterval: "",
-    image: "",
+    // h2oInterval: 0,
+    h2oAmount: "",
+    // image: "",
 };
 
 const plantList = [];
@@ -50,12 +51,12 @@ export default function EditPlant() {
     const submit = () => {
         const newPlant = {
             nickname: formValues.nickname.trim(),
-            h2oInterval: formValues.h2oInterval,
+            species: formValues.species,
             h2oAmount: formValues.h2oAmount.trim()
         }
         const editPlant = {
             nickname: formValues.nickname.trim(),
-            h2oInterval: formValues.h2oInterval,
+            species: formValues.species,
             h2oAmount: formValues.h2oAmount.trim(),
         }
         // putNewPlant(editPlant);
@@ -103,25 +104,22 @@ const StyledEditPlants = styled.div`
     display: flex;
     justify-content: center;
     padding-top: 5%;
-`
+`        
+
 const StyledNav = styled.div`
-    .navBar{
+    .navBar {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding-left: 5%;
     }
-
     .navBar .title {
         color: white;
     }
-
     nav {
         width:30%;
         display: flex;
-        
     }
-
     nav a {
         border:1px solid ${prop => prop.theme.accentColor};
         padding:1%;
@@ -129,7 +127,6 @@ const StyledNav = styled.div`
         color: black;
         text-decoration:none;
     }
-
     nav a:hover {
         border:1px solid black;
         color: white;

@@ -11,8 +11,8 @@ const Plant = ({details}) => {
                 <Plantcard>
                     <div className='plant container'>
                         <h2>{details.nickname}</h2>
-                       <p>species: {details.size}</p>
-                    <p>h2oInterval: {details.special}</p>
+                       {/* <p>species: {details.size}</p> */}
+                    <p>species: {details.special}</p>
                     <p>imgae: {details.image}</p>
                     </div>
                 </Plantcard>
