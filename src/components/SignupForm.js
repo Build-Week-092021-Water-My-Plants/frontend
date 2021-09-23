@@ -7,7 +7,7 @@ const SignupForm = () => {
     const [formValue, setFormValue] = useState({
         username: "",
         password: "",
-        phoneNumber: "",
+        phone_number: "",
     });
     const { push } = useHistory();
 
@@ -20,7 +20,7 @@ const SignupForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        SignupForm(formValue);
+        // SignupForm(formValue);
         axios
             .post("/", formValue)
             .then((res) => {
@@ -78,10 +78,10 @@ const SignupForm = () => {
                                 type="tel"
                                 name="phoneNumber"
                                 placeholder="Phone"
-                                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                // pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                                 value={formValue.phoneNumber}
                                 onChange={handleChange}
-                                placeholder="format=555-666-9999"
+                                placeholder="format=5556669999"
                             />
                         </label>
                         <button onSubmit={handleSubmit}>Submit</button>
