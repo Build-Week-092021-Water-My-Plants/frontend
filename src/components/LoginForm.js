@@ -48,14 +48,18 @@ const LoginForm = (props) => {
     return (
     <div className="body">
         <StyledNav>
-                    <h1 className="title">WATER MY PLANTS</h1>
-                    <nav>
-                        <Link to="/">Home</Link>
-                        <Link to="/meet-our-team">Meet Our Team</Link>
-                        <Link to="/login">Log-In</Link>
-                    </nav>
-            </StyledNav>
-        <StyledEditPlants>   
+        <div className="navBar">
+                <h1 className="title">WATER MY PLANTS</h1>
+                <nav>
+                    <Link to="/">Home</Link>
+                    <span className='navspans'></span>
+                    <Link to="/meet-our-team">Meet Our Team</Link>
+                    <span className='navspans'></span>
+                    <Link to="/signup">Sign-Up</Link>
+                </nav>
+                </div>
+        </StyledNav>
+    <StyledEditPlants>   
             <div className="loginForm"> 
         <StyledForm>
             <h1>Log In</h1>
