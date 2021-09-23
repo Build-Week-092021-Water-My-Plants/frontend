@@ -13,7 +13,7 @@ const initialState = {
     user: {
         username:'',
         password:'',
-        phone:''
+        phone_number:''
     },
     plant: {
         id: null,
