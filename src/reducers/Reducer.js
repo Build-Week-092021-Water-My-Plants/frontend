@@ -18,8 +18,8 @@ const initialState = {
     plant: {
         id: null,
         nickname: '',
-        // species: '',
-        h2oInterval: '',
+        species: '',
+        // h2oInterval: '',
         h2oFrequency: '',
         image: ''
     },

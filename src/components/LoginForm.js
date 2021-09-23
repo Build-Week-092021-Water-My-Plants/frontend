@@ -8,7 +8,8 @@ const LoginForm = (props) => {
     const [credentials, setCredentials] = useState(
         {
             username: "",
-            password: ""
+            password: "",
+            phone_number: "",
         }
     )
     const [error, setError] = useState("");
@@ -72,6 +73,16 @@ const LoginForm = (props) => {
                                 value={credentials.password}
                                 onChange={handleChange}
                             />
+
+                            <label>Phone number: </label>
+                            <input
+                                type="tel"
+                                name="phoneNumber"
+                                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                placeholder="format=555-666-9999"
+                                value={credentials.phone_number}
+                                onChange={handleChange}
+                            />
                             <button >Log In</button>
                         </div>
                     </form>
@@ -131,7 +142,7 @@ const StyledChild = styled.div`
     flex-direction:column;
     align-items: center;
     justify-content: center;
-    width:50%;
+    width:40%;
     height: auto;
     margin: 1% 1%;
     margin-left: 25%;

@@ -7,14 +7,14 @@ import styled from "styled-components";
 
 const initialFormValues = {
     nickname: "",
-    h2oInterval: 0,
+    species: "",
     h2oAmount: "",
 };
 
 const initialFormErrors = {
     nickname: "",
-    // species: "",
-    h2oInterval: 0,
+    species: "",
+    // h2oInterval: 0,
     h2oAmount: "",
     // image: "",
 };
@@ -51,12 +51,12 @@ export default function EditPlant() {
     const submit = () => {
         const newPlant = {
             nickname: formValues.nickname.trim(),
-            h2oInterval: formValues.h2oInterval,
+            species: formValues.species,
             h2oAmount: formValues.h2oAmount.trim()
         }
         const editPlant = {
             nickname: formValues.nickname.trim(),
-            h2oInterval: formValues.h2oInterval,
+            species: formValues.species,
             h2oAmount: formValues.h2oAmount.trim(),
         }
         // putNewPlant(editPlant);

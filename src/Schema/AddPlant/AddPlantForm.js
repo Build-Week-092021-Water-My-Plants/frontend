@@ -34,7 +34,7 @@ export default function AddPlantForm(props) {
                             onChange={onChange}
                         />
                     </label>
-                    {/* <label>
+                    <label>
                         <input 
                             type="text"
                             name="species"
@@ -42,8 +42,8 @@ export default function AddPlantForm(props) {
                             value={formValues.species}
                             onChange={onChange}
                         />
-                    </label> */}
-                    <label>
+                    </label>
+                    {/* <label>
                         <input
                             type="text"
                             name="h2oInterval"
@@ -51,7 +51,7 @@ export default function AddPlantForm(props) {
                             value={formValues.h2oInterval}
                             onChange={onChange}
                         />
-                    </label>
+                    </label> */}
 
                     <label>
                         <input 
@@ -77,7 +77,7 @@ export default function AddPlantForm(props) {
                             {errors.nickname}
                         </div>
                         <div className="Error">
-                            {errors.h2oInterval}
+                            {errors.species}
                         </div>
                         <div className="h2oError">
                             {errors.h2oFrequency}
