@@ -8,15 +8,15 @@ const Home = () => {
             <header>
                 <h1 id="hide"> Water My Plants </h1>
                 <nav>
-                    <span className="navspans">
+                    {/* <span className="navspans"> */}
                         <Link to="/"> Home </Link>
-                    </span>
-                    <span className="navspans">
+                    {/* </span>
+                    <span className="navspans"> */}
                         <Link to="/plantList"> My Plants </Link>
-                    </span>
-                    <span className="navspans">
+                    {/* </span>
+                    <span className="navspans"> */}
                         <Link to="/meet-our-team"> Meet Our Team </Link>
-                    </span>
+                    {/* </span> */}
                 </nav>
             </header>
 
@@ -45,7 +45,8 @@ export default Home;
 
 const StyledHome = styled.div`
     box-sizing: border-box;
-    height: 100vh;
+    width:100%;
+    height: auto;
     background: url("https://media.istockphoto.com/photos/hand-watering-young-plants-in-growing-picture-id1126962479?b=1&k=20&m=1126962479&s=170667a&w=0&h=Pjzibz8tfGau4ah9dNkZs8wycHCdD0KMgZHr38E7dHg=");
     background-repeat: no-repeat;
     background-size: cover;
@@ -65,6 +66,7 @@ const StyledHome = styled.div`
         display: flex;
         flex-direction: column;
         margin-top: 10%;
+        margin-bottom:10%;
         border: none;
     }
 
@@ -73,7 +75,19 @@ const StyledHome = styled.div`
     }
 
     nav {
-        white-space:nowrap;
+        width: 30%;
+        white-space: nowrap;
+    }
+    nav a {
+        border: 1px solid ${(prop) => prop.theme.accentColor};
+        padding: 1%;
+        margin: 0.2%;
+        color: black;
+        text-decoration: none;
+    }
+    nav a:hover {
+        border: 1px solid black;
+        color: white;
     }
 
     .main h1 {

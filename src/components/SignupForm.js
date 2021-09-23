@@ -51,30 +51,33 @@ const SignupForm = () => {
                 <form onSubmit={handleSubmit}>
                     <div className="inputs">
                         <label>
-                            Username: &nbsp;
+                            {/* Username: &nbsp; */}
                             <input
                                 type="username"
                                 name="username"
                                 id="username"
+                                placeholder="Username"
                                 value={formValue.username}
                                 onChange={handleChange}
                             />
                         </label>
                         <label>
-                            Password: &nbsp;
+                            {/* Password: &nbsp; */}
                             <input
                                 type="password"
                                 name="password"
                                 id="password"
+                                placeholder="Password"
                                 value={formValue.password}
                                 onChange={handleChange}
                             />
                         </label>
                         <label>
-                            PhoneNumber: &nbsp;
+                            {/* PhoneNumber: &nbsp; */}
                             <input
                                 type="tel"
                                 name="phoneNumber"
+                                placeholder="Phone"
                                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                                 value={formValue.phoneNumber}
                                 onChange={handleChange}
@@ -93,10 +96,10 @@ export default SignupForm;
 
 const StyledSignupForm = styled.div`
   background-image: url("https://media.istockphoto.com/photos/hand-watering-young-plants-in-growing-picture-id1126962479?b=1&k=20&m=1126962479&s=170667a&w=0&h=Pjzibz8tfGau4ah9dNkZs8wycHCdD0KMgZHr38E7dHg=");
-  background-size: cover;
+  background-size:cover;
   box-sizing:border-box;
   width: 100%;
-  height: 100vh;
+  height: auto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -130,7 +133,7 @@ const StyledSignupForm = styled.div`
           font-size:1.9rem;
       }
       header {
-          height:auto;
+          height:3%;
           display:flex;
           justify-content:center;
           align-items:center;
@@ -167,17 +170,17 @@ const StyledHeader = styled.header`
 
 const StyledChild = styled.div`
     border: 0px;
-    border-radius: 30px;
-    background-color: #f2f2f2;
+    /* border-radius: 30px;
+    background-color: #f2f2f2; */
     display: flex;
     flex-direction:column;
     align-items: center;
     justify-content: center;
     width:50%;
     height: auto;
-    margin: 10% 1%;
+    margin: 5% 1%;
 
-    form {
+    /* form {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -221,5 +224,55 @@ const StyledChild = styled.div`
     }
     button:hover {
         opacity: 0.85;
+    } */
+    form {
+        background: rgba( 255, 255, 255, 0.2 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 6px );
+        -webkit-backdrop-filter: blur( 6px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        border-radius:10px;
+        width:400px;
+        margin:2% 0%;
+        padding:2% 2%;
+    }
+    input {
+        width:auto;
+        height:auto;
+        padding: 5%;
+        margin: 5%;
+        border: none;
+        border-radius: 25px;
+        text-align:center;
+    }
+    button {
+        width: 80%;
+        height: 40px;
+        font-size: 1.3rem;
+        color: white;
+        font-weight: 700;
+        border: 0px;
+        cursor: pointer;
+        transition: opacity 0.25s ease-out;
+        margin-top:5%;
+        border-radius: 10px;
+        background-color: rgba( 110, 115, 47, 0.2 );
+        border: 1px solid white;
+    }
+    button:hover {
+        opacity: 0.85;
+        color: white;
+        background: rgba( 110, 115, 47, 0.2 );
+        box-shadow: inset 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 6px );
+        -webkit-backdrop-filter: blur( 6px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        transition: 0.3s;
     }
 `;//StyledChild END
