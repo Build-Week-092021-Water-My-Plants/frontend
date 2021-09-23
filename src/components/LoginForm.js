@@ -43,54 +43,99 @@ const LoginForm = (props) => {
     }
 
     return (
-        <Container>
-            <div>
-                <StyledHeader>
-                    <h1 id='hide'>Log-In</h1>
-                    <nav>
-                        <Link to="/">Home</Link>
-                        <Link to="/signup">Sign Up</Link>
-                        <Link to="/meet-our-team">Meet Our Team</Link>
-                    </nav>
-                </StyledHeader>
-                <StyledChild>
+// <<<<<<< editplant/adam-smith
+        <div className="body"> 
+        <StyledNav>
+        <div className="navBar">
+                <h1 className="title">WATER MY PLANTS</h1>
+                <nav>
+                    <Link to="/">Home</Link>
+                    <span className='navspans'></span>
+                    <Link to="/meet-our-team">Meet Our Team</Link>
+                    <span className='navspans'></span>
+                    <Link to="/login">Log-In</Link>
+                </nav>
+                </div>
+        </StyledNav>
+    <StyledEditPlants>   
+            <div className="loginForm"> 
+        <StyledForm>
+            <form>
+            <label>Username: </label>
+                <input
+                type='username'
+                name='username'
+                id='username'
+                value={formValue.username}
+                onChange={handleChange}
+                />
 
-                    <form onSubmit={handleSubmit}>
-                        <div className='input-container'>
-                            <label>Username: </label>
-                            <input
-                                type='username'
-                                name='username'
-                                id='username'
-                                value={credentials.username}
-                                onChange={handleChange}
-                            />
-
-                            <label>Password: </label>
-                            <input
-                                type='password'
-                                name='password'
-                                id='password'
-                                value={credentials.password}
-                                onChange={handleChange}
-                            />
-
-                            <label>Phone number: </label>
-                            <input
-                                type="tel"
-                                name="phoneNumber"
-                                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                                placeholder="format=555-666-9999"
-                                value={credentials.phone_number}
-                                onChange={handleChange}
-                            />
-                            <button >Log In</button>
-                        </div>
-                    </form>
-                </StyledChild>
-                <p id="error" className="error">{error}</p>
+            <label>Password: </label>
+                <input
+                type='password'
+                name='password'
+                id='password'
+                value={formValue.password}
+                onChange={handleChange}
+                />
+            <button onSubmit={handleSubmit} >Log In</button>
+            </form>
+        </StyledForm>
             </div>
-        </Container>
+    </StyledEditPlants>
+            </div>
+        
+        
+// =======
+//         <Container>
+//             <div>
+//                 <StyledHeader>
+//                     <h1 id='hide'>Log-In</h1>
+//                     <nav>
+//                         <Link to="/">Home</Link>
+//                         <Link to="/signup">Sign Up</Link>
+//                         <Link to="/meet-our-team">Meet Our Team</Link>
+//                     </nav>
+//                 </StyledHeader>
+//                 <StyledChild>
+
+//                     <form onSubmit={handleSubmit}>
+//                         <div className='input-container'>
+//                             <label>Username: </label>
+//                             <input
+//                                 type='username'
+//                                 name='username'
+//                                 id='username'
+//                                 value={credentials.username}
+//                                 onChange={handleChange}
+//                             />
+
+//                             <label>Password: </label>
+//                             <input
+//                                 type='password'
+//                                 name='password'
+//                                 id='password'
+//                                 value={credentials.password}
+//                                 onChange={handleChange}
+//                             />
+
+//                             <label>Phone number: </label>
+//                             <input
+//                                 type="tel"
+//                                 name="phoneNumber"
+//                                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+//                                 placeholder="format=555-666-9999"
+//                                 value={credentials.phone_number}
+//                                 onChange={handleChange}
+//                             />
+//                             <button >Log In</button>
+//                         </div>
+//                     </form>
+//                 </StyledChild>
+//                 <p id="error" className="error">{error}</p>
+//             </div>
+//         </Container>
+// >>>>>>> main
     )
 }
 
@@ -108,106 +153,246 @@ const StyledEditPlants = styled.div`
     justify-content: center;
     padding-top: 5%;
 `        
+// <<<<<<< editplant/adam-smith
+const StyledNav = styled.div`
+    .navBar{
+// =======
 
-const Container = styled.div`
-  background-image: url("https://media.istockphoto.com/photos/hand-watering-young-plants-in-growing-picture-id1126962479?b=1&k=20&m=1126962479&s=170667a&w=0&h=Pjzibz8tfGau4ah9dNkZs8wycHCdD0KMgZHr38E7dHg=");
-  background-size: cover;
-  box-sizing:border-box;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  h1 {
-    color: black;
-    margin-top: none;
-    font-size: 2rem;
-  }
-`;
-const StyledHeader = styled.header`
-  color: ${({ theme }) => theme.secondaryColor};
-  display: flex;
-  justify-content: flex-end;
-  align-items: baseline;
-  width: 100vh;
-  height: 15%;
-  nav {
-    width: 35%;
-  }
-  nav a {
-    border: 1px solid ${(prop) => prop.theme.accentColor};
-    padding: 1%;
-    margin: 0.5%;
-    color: black;
-    text-decoration: none;
-  }
-  nav a:hover {
-    border: 1px solid black;
-    color: white;
-  }`;
+// const Container = styled.div`
+//   background-image: url("https://media.istockphoto.com/photos/hand-watering-young-plants-in-growing-picture-id1126962479?b=1&k=20&m=1126962479&s=170667a&w=0&h=Pjzibz8tfGau4ah9dNkZs8wycHCdD0KMgZHr38E7dHg=");
+//   background-size: cover;
+//   box-sizing:border-box;
+//   width: 100%;
+//   height: 100vh;
+//   display: flex;
+//   justify-content: flex-start;
+//   align-items: center;
+//   flex-direction: column;
+//   h1 {
+//     color: black;
+//     margin-top: none;
+//     font-size: 2rem;
+//   }
+// `;
+// const StyledHeader = styled.header`
+//   color: ${({ theme }) => theme.secondaryColor};
+//   display: flex;
+//   justify-content: flex-end;
+//   align-items: baseline;
+//   width: 100vh;
+//   height: 15%;
+//   nav {
+//     width: 35%;
+//   }
+//   nav a {
+//     border: 1px solid ${(prop) => prop.theme.accentColor};
+//     padding: 1%;
+//     margin: 0.5%;
+//     color: black;
+//     text-decoration: none;
+//   }
+//   nav a:hover {
+//     border: 1px solid black;
+//     color: white;
+//   }`;
 
-const StyledChild = styled.div`
-    border: 0px;
-    border-radius: 30px;
-    background-color: rgb(242, 242, 242, .8);
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    justify-content: center;
-    width:40%;
-    height: auto;
-    margin: 1% 1%;
-    margin-left: 25%;
-    margin-top: 10%;
+// const StyledChild = styled.div`
+//     border: 0px;
+//     border-radius: 30px;
+//     background-color: rgb(242, 242, 242, .8);
+//     display: flex;
+//     flex-direction:column;
+//     align-items: center;
+//     justify-content: center;
+//     width:40%;
+//     height: auto;
+//     margin: 1% 1%;
+//     margin-left: 25%;
+//     margin-top: 10%;
 
-    form {
+//     form {
+// >>>>>>> main
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
-        justify-items: center;
-        width:70%;
-        height:auto;
-        margin-top: 1%;
-        margin-bottom: 3%;
-        padding: 10%;
+        padding-left: 5%;
     }
-
-label {
-    font-size: 1.5rem;
-}
-
-    .inputs {
+    .navBar .title {
+        color: white;
+    }
+    nav {
+        width:30%;
         display: flex;
+        
+    }
+    nav a {
+        border:1px solid ${prop => prop.theme.accentColor};
+        padding:1%;
+        margin:0.2%;
+        color: black;
+        text-decoration:none;
+    }
+    nav a:hover {
+        border:1px solid black;
+        color: white;
+        background-color: #6f732f;
+    }
+`
+const StyledForm = styled.div `
+    .loginForm {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    form {
+        background: rgba( 255, 255, 255, 0.2 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 6px );
+        -webkit-backdrop-filter: blur( 6px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        display:flex;
+        flex-direction:column;
         justify-content:center;
         align-items:center;
-        flex-direction:column;
+        border-radius:10px;
+        width:400px;
+        margin:2% 0%;
         padding:2% 2%;
     }
-
     input {
         width:auto;
         height:auto;
-        padding: 3%;
-        margin: 2%;
+        padding: 5%;
+        margin: 5%;
         border: none;
         border-radius: 25px;
+        text-align:center;
     }
-
     button {
-        border-radius: 25px;
         width: 80%;
         height: 40px;
         font-size: 1.3rem;
         color: white;
         font-weight: 700;
-        background: rgb(34, 193, 195);
-        background: linear-gradient(90deg, rgba(34, 193, 195, 1) 0%, #284b63 100%);
         border: 0px;
         cursor: pointer;
         transition: opacity 0.25s ease-out;
         margin-top:5%;
+        border-radius: 10px;
+        background-color: rgba( 110, 115, 47, 0.2 );
+        border: 1px solid white;
     }
     button:hover {
         opacity: 0.85;
-    }`;
+        color: white;
+        background: rgba( 110, 115, 47, 0.2 );
+        box-shadow: inset 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 6px );
+        -webkit-backdrop-filter: blur( 6px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        transition: 0.3s;
+    }
+`
+//   background-image: url("https://media.istockphoto.com/photos/hand-watering-young-plants-in-growing-picture-id1126962479?b=1&k=20&m=1126962479&s=170667a&w=0&h=Pjzibz8tfGau4ah9dNkZs8wycHCdD0KMgZHr38E7dHg=");
+//   background-size: cover;
+//   box-sizing:border-box;
+//   width: 100%;
+//   height: 100vh;
+//   display: flex;
+//   justify-content: flex-start;
+//   align-items: center;
+//   flex-direction: column;
+//   h1 {
+//     color: black;
+//     margin-top: none;
+//     font-size: 2rem;
+//   }
+// `;
+// const StyledHeader = styled.header`
+//   color: ${({ theme }) => theme.secondaryColor};
+//   display: flex;
+//   justify-content: flex-end;
+//   align-items: baseline;
+//   width: 100vh;
+//   height: 15%;
+//   nav {
+//     width: 35%;
+//   }
+//   nav a {
+//     border: 1px solid ${(prop) => prop.theme.accentColor};
+//     padding: 1%;
+//     margin: 0.5%;
+//     color: black;
+//     text-decoration: none;
+//   }
+//   nav a:hover {
+//     border: 1px solid black;
+//     color: white;
+//   }`;
+
+//   const StyledChild = styled.div`
+//     border: 0px;
+//     border-radius: 30px;
+//     background-color: rgb(242, 242, 242, .8);
+//     display: flex;
+//     flex-direction:column;
+//     align-items: center;
+//     justify-content: center;
+//     width:50%;
+//     height: auto;
+//     margin: 1% 1%;
+//     margin-left: 25%;
+//     margin-top: 10%;
+
+//     form {
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         justify-items: center;
+//         width:70%;
+//         height:auto;
+//         margin-top: 1%;
+//         margin-bottom: 3%;
+//         padding: 10%;
+//     }
+
+// label {
+//     font-size: 1.5rem;
+// }
+
+//     .inputs {
+//         display: flex;
+//         justify-content:center;
+//         align-items:center;
+//         flex-direction:column;
+//         padding:2% 2%;
+//     }
+
+//     input {
+//         width:auto;
+//         height:auto;
+//         padding: 3%;
+//         margin: 2%;
+//         border: none;
+//         border-radius: 25px;
+//     }
+
+//     button {
+//         border-radius: 25px;
+//         width: 80%;
+//         height: 40px;
+//         font-size: 1.3rem;
+//         color: white;
+//         font-weight: 700;
+//         background: rgb(34, 193, 195);
+//         background: linear-gradient(90deg, rgba(34, 193, 195, 1) 0%, #284b63 100%);
+//         border: 0px;
+//         cursor: pointer;
+//         transition: opacity 0.25s ease-out;
+//         margin-top:5%;
+//     }
+//     button:hover {
+//         opacity: 0.85;
+//     }`;
