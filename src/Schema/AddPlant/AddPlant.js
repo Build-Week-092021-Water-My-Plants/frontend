@@ -5,39 +5,43 @@ import AddPlantForm from './AddPlantForm'
 import axiosWithAuth from '../../helpers/axiosWithAuth';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { connect } from 'react-redux';
+import { add } from '../../actions/index'
 
 const initialValues = {
     nickname: '',
-    // h2oInterval: "",
-    h2oAmount: '',
     species: '',
+    h2oAmount: '',
+    // h2oInterval: "",
     // image: ''
 }
 
 const initialErrors = {
     nickname: '',
-    // h2oInterval: "",
     h2oFrequency: '',
     species: '',
+    // h2oInterval: "",
 }
 
 const initialPlantList = [];
 const initialDisabled = true;
 
-export default function AddPlant() {
+const AddPlant = (props) => {
+    console.log('AddPlant.js ln:30 props', props);
     const [plantList, setPlantList] = useState(initialPlantList);
     const [formValues, setFormValues] = useState(initialValues);
     const [errors, setErrors] = useState(initialErrors);
     const [disabled, setDisabled] = useState(initialDisabled);
 
     const postNewPlant = (newPlant) => {
-        console.log('newPlant:', newPlant)
+        console.log('AddPlant.js ln:34', newPlant)
         axiosWithAuth()
             .post("plants", newPlant)
             .then((res) => {
+                console.log('AddPlant.js ln:45 res', res);
                 setPlantList([...plantList, res.data]);
                 setFormValues(initialPlantList);
-                console.log(`AddPlant.js ln:45 `, postNewPlant);
+                props.add(res.data.user_id);
             })
             .catch((err) => {
                 debugger;
@@ -81,14 +85,17 @@ export default function AddPlant() {
         validate(name, value);
         setFormValues({ ...formValues, [name]: value });
     };
+const user_id = localStorage.getItem("user_id")
+const species = formValues.species
+const nickname = formValues.nickname
+const h2oFrequency = formValues.h2oFrequency
 
     const submitForm = () => {
         const newPlant = {
-            nickname: '',
-            // h2oInterval: "",
-            h2oFrequency: '',
-            species: '',
-            // image: ''
+            species,
+            h2oFrequency,
+            user_id,
+            nickname
             
         }
         postNewPlant(newPlant);
@@ -117,6 +124,7 @@ export default function AddPlant() {
         </StyledAddPlants>
     )
 }
+export default connect (null, {add})(AddPlant);
 
 const StyledAddPlants = styled.div`
     background-image: url("https://media.istockphoto.com/photos/hand-watering-young-plants-in-growing-picture-id1126962479?b=1&k=20&m=1126962479&s=170667a&w=0&h=Pjzibz8tfGau4ah9dNkZs8wycHCdD0KMgZHr38E7dHg=");

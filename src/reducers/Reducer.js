@@ -21,7 +21,7 @@ const initialState = {
         species: '',
         // h2oInterval: '',
         h2oFrequency: '',
-        image: ''
+        // image: ''
     },
     plantList: [],
 };

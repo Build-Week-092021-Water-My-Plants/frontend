@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-// import { axiosWithAuth } from "../axiosWithAuth";
 import styled from "styled-components";
 import { useHistory } from "react-router";
-
 import { connect } from "react-redux";
 import { getPlants, fetchFail } from "../actions";
+import { Link } from "react-router-dom";
+// import { axiosWithAuth } from "../axiosWithAuth";
 
 const PlantList = (props) => {
     console.log("PlantList.js ln:10 props", props);
@@ -13,7 +13,7 @@ const PlantList = (props) => {
     const history = useHistory();
 
     useEffect(() => {
-        props.getPlants(setPlants);
+        props.getPlants();
     }, []);
 
     if (isFetching) {
@@ -62,11 +62,17 @@ const PlantList = (props) => {
 
     return (
         <Plantlist>
-            <div>
-                <h1>Here's the plant list</h1>
-            </div>
+            <header>
+                <h1 id="hide"> Water My Plants </h1>
+                <nav>
+                    <Link to="/"> Home </Link>
+                    <Link to="/plantList"> My Plants </Link>
+                    <Link to="/addPlant"> Add Plants </Link>
+                    <Link to="/meet-our-team"> Meet Our Team </Link>
+                </nav>
+            </header>
             <main className="plant-list">
-                {plants.map((plant) => (
+                {props.plant.map((plant) => (
                     <div className="plant-card" key={plant.plantID}>
                         <div className="plant-details">
                             <h2>{plant.nickname}</h2>
