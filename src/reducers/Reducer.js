@@ -10,6 +10,7 @@ import {
   } from '../actions/index';
 
 const initialState = {
+<<<<<<< HEAD
     user: "",
     // user: {
     //     username:'',
@@ -17,6 +18,13 @@ const initialState = {
     //     phone:''
 
     // },
+=======
+    user: {
+        username:'',
+        password:'',
+        phone_number:''
+    },
+>>>>>>> 6f4b8444532bf4917d97d7631ce36dfeb2c43ca2
     plant: {
         id: null,
         nickname: '',
