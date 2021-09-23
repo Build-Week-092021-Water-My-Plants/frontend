@@ -104,25 +104,22 @@ const StyledEditPlants = styled.div`
     display: flex;
     justify-content: center;
     padding-top: 5%;
-`
+`        
+
 const StyledNav = styled.div`
-    .navBar{
+    .navBar {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding-left: 5%;
     }
-
     .navBar .title {
         color: white;
     }
-
     nav {
         width:30%;
         display: flex;
-        
     }
-
     nav a {
         border:1px solid ${prop => prop.theme.accentColor};
         padding:1%;
@@ -130,7 +127,6 @@ const StyledNav = styled.div`
         color: black;
         text-decoration:none;
     }
-
     nav a:hover {
         border:1px solid black;
         color: white;

@@ -27,8 +27,13 @@ export default function EditPlantForm(props) {
     }
     return (
         <div>
+<<<<<<< HEAD
             <StyledAddPlantForm>
                 <form
+=======
+        <StyledEditPlantForm>
+              <form
+>>>>>>> 47ffd87e56064853dfeba8a298c81378d8898b64
                     className="add-plant contatiner"
                     id="add-plant-form"
                     onChange={onChange}
@@ -96,14 +101,18 @@ export default function EditPlantForm(props) {
                     <div>
                     </div>
                 </form>
+<<<<<<< HEAD
             </StyledAddPlantForm>
+=======
+        </StyledEditPlantForm>
+>>>>>>> 47ffd87e56064853dfeba8a298c81378d8898b64
         </div>
     )
 }
 
 
 
-const StyledAddPlantForm = styled.div`
+const StyledEditPlantForm = styled.div`
     form {
         background: rgba( 255, 255, 255, 0.2 );
         box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -119,15 +128,6 @@ const StyledAddPlantForm = styled.div`
         width:400px;
         margin:2% 0%;
         padding:2% 2%;
-    }
-
-    .inputs {
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        flex-direction:column;
-        padding: 2%;
-        margin: 1%;
     }
 
     input {
@@ -149,16 +149,19 @@ const StyledAddPlantForm = styled.div`
         font-weight: 700;
         border: 0px;
         cursor: pointer;
+        box-shadow: inset 0 0 0 0;
         transition: opacity 0.25s ease-out;
         margin-top:5%;
         border-radius: 10px;
+        background-color: rgba( 110, 115, 47, 0.2 );
+        border: 1px solid white;
+
       }
 
       button:hover {
         opacity: 0.85;
-        color: black;
-        background: rgba( 169, 251, 163, 0.2 );
-        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        background: rgba( 110, 115, 47, 0.2 );
+        box-shadow: inset 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
         backdrop-filter: blur( 6px );
         -webkit-backdrop-filter: blur( 6px );
         border-radius: 10px;
