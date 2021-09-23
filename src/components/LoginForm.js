@@ -53,6 +53,7 @@ const LoginForm = (props) => {
                     </nav>
                 </StyledHeader>
                 <StyledChild>
+
                     <form onSubmit={handleSubmit}>
                         <div className='input-container'>
                             <label>Username: </label>
@@ -83,7 +84,19 @@ const LoginForm = (props) => {
 }
 
 export default LoginForm;
+// const StyledBackground = styled.div`
 
+// `
+const StyledEditPlants = styled.div`
+    box-sizing: border-box;
+    background: url("https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1380&q=80");
+    background-size: cover;
+    width:auto;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+`        
 
 const Container = styled.div`
   background-image: url("https://media.istockphoto.com/photos/hand-watering-young-plants-in-growing-picture-id1126962479?b=1&k=20&m=1126962479&s=170667a&w=0&h=Pjzibz8tfGau4ah9dNkZs8wycHCdD0KMgZHr38E7dHg=");
