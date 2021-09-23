@@ -46,7 +46,6 @@ const LoginForm = (props) => {
     }
 
     return (
-// <<<<<<< editplant/adam-smith
         <div className="body"> 
         <StyledNav>
         <div className="navBar">
@@ -63,13 +62,13 @@ const LoginForm = (props) => {
     <StyledEditPlants>   
             <div className="loginForm"> 
         <StyledForm>
-            <form>
+            <form onSubmit={handleSubmit} >
             <label>Username: </label>
                 <input
                 type='username'
                 name='username'
                 id='username'
-                value={formValue.username}
+                value={credentials.username}
                 onChange={handleChange}
                 />
 
@@ -78,18 +77,18 @@ const LoginForm = (props) => {
                 type='password'
                 name='password'
                 id='password'
-                value={formValue.password}
+                value={credentials.password}
                 onChange={handleChange}
                 />
-            <button onSubmit={handleSubmit} >Log In</button>
+            <button>Log In</button>
             </form>
         </StyledForm>
             </div>
     </StyledEditPlants>
             </div>
+    )
+}
         
-        
-// =======
 //         <Container>
 //             <div>
 //                 <StyledHeader>
@@ -139,14 +138,10 @@ const LoginForm = (props) => {
 //             </div>
 //         </Container>
 // >>>>>>> main
-    )
-}
 
 // export default LoginForm;
 export default connect (null, {login})(LoginForm)
-// const StyledBackground = styled.div`
 
-// `
 const StyledEditPlants = styled.div`
     box-sizing: border-box;
     background: url("https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1380&q=80");
@@ -157,91 +152,105 @@ const StyledEditPlants = styled.div`
     justify-content: center;
     padding-top: 5%;
 `        
-// <<<<<<< editplant/adam-smith
 const StyledNav = styled.div`
-    .navBar{
-// =======
-
-// const Container = styled.div`
-//   background-image: url("https://media.istockphoto.com/photos/hand-watering-young-plants-in-growing-picture-id1126962479?b=1&k=20&m=1126962479&s=170667a&w=0&h=Pjzibz8tfGau4ah9dNkZs8wycHCdD0KMgZHr38E7dHg=");
-//   background-size: cover;
-//   box-sizing:border-box;
-//   width: 100%;
-//   height: 100vh;
-//   display: flex;
-//   justify-content: flex-start;
-//   align-items: center;
-//   flex-direction: column;
-//   h1 {
-//     color: black;
-//     margin-top: none;
-//     font-size: 2rem;
-//   }
-// `;
-// const StyledHeader = styled.header`
-//   color: ${({ theme }) => theme.secondaryColor};
-//   display: flex;
-//   justify-content: flex-end;
-//   align-items: baseline;
-//   width: 100vh;
-//   height: 15%;
-//   nav {
-//     width: 35%;
-//   }
-//   nav a {
-//     border: 1px solid ${(prop) => prop.theme.accentColor};
-//     padding: 1%;
-//     margin: 0.5%;
-//     color: black;
-//     text-decoration: none;
-//   }
-//   nav a:hover {
-//     border: 1px solid black;
-//     color: white;
-//   }`;
-
-// const StyledChild = styled.div`
-//     border: 0px;
-//     border-radius: 30px;
-//     background-color: rgb(242, 242, 242, .8);
-//     display: flex;
-//     flex-direction:column;
-//     align-items: center;
-//     justify-content: center;
-//     width:40%;
-//     height: auto;
-//     margin: 1% 1%;
-//     margin-left: 25%;
-//     margin-top: 10%;
-
-    form {
-// >>>>>>> main
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-left: 5%;
-    }
-    .navBar .title {
-        color: white;
-    }
     nav {
-        width:30%;
-        display: flex;
-        
+      width: 35%;
     }
     nav a {
-        border:1px solid ${prop => prop.theme.accentColor};
-        padding:1%;
-        margin:0.2%;
-        color: black;
-        text-decoration:none;
+      border: 1px solid ${(prop) => prop.theme.accentColor};
+      padding: 1%;
+      margin: 0.5%;
+      color: black;
+      text-decoration: none;
     }
     nav a:hover {
-        border:1px solid black;
-        color: white;
-        background-color: #6f732f;
+      border: 1px solid black;
+      color: white;
     }
-`
+`;
+//  const Container = styled.div`
+//    background-image: url("https://media.istockphoto.com/photos/hand-watering-young-plants-in-growing-picture-id1126962479?b=1&k=20&m=1126962479&s=170667a&w=0&h=Pjzibz8tfGau4ah9dNkZs8wycHCdD0KMgZHr38E7dHg=");
+//    background-size: cover;
+//    box-sizing:border-box;
+//    width: 100%;
+//    height: 100vh;
+//    display: flex;
+//    justify-content: flex-start;
+//    align-items: center;
+//    flex-direction: column;
+//    h1 {
+//      color: black;
+//      margin-top: none;
+//      font-size: 2rem;
+//    }
+//  `;
+
+//  const StyledHeader = styled.header`
+//    color: ${({ theme }) => theme.secondaryColor};
+//    display: flex;
+//    justify-content: flex-end;
+//    align-items: baseline;
+//    width: 100vh;
+//    height: 15%;
+//    nav {
+//      width: 35%;
+//    }
+//    nav a {
+//      border: 1px solid ${(prop) => prop.theme.accentColor};
+//      padding: 1%;
+//      margin: 0.5%;
+//      color: black;
+//      text-decoration: none;
+//    }
+//    nav a:hover {
+//      border: 1px solid black;
+//      color: white;
+//    }
+// `;
+
+//  const StyledChild = styled.div`
+//      border: 0px;
+//      border-radius: 30px;
+//      background-color: rgb(242, 242, 242, .8);
+//      display: flex;
+//      flex-direction:column;
+//      align-items: center;
+//      justify-content: center;
+//      width:40%;
+//      height: auto;
+//      margin: 1% 1%;
+//      margin-left: 25%;
+//      margin-top: 10%;
+// `;
+
+// >>>>>>> main
+    
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//         padding-left: 5%;
+//     }
+//     .navBar .title {
+//         color: white;
+//     }
+//     nav {
+//         width:30%;
+//         display: flex;
+        
+//     }
+//     nav a {
+//         border:1px solid ${prop => prop.theme.accentColor};
+//         padding:1%;
+//         margin:0.2%;
+//         color: black;
+//         text-decoration:none;
+//     }
+//     nav a:hover {
+//         border:1px solid black;
+//         color: white;
+//         background-color: #6f732f;
+//     }
+// `
 const StyledForm = styled.div `
     .loginForm {
         display: flex;
@@ -298,22 +307,24 @@ const StyledForm = styled.div `
         border: 1px solid rgba( 255, 255, 255, 0.18 );
         transition: 0.3s;
     }
-`
-//   background-image: url("https://media.istockphoto.com/photos/hand-watering-young-plants-in-growing-picture-id1126962479?b=1&k=20&m=1126962479&s=170667a&w=0&h=Pjzibz8tfGau4ah9dNkZs8wycHCdD0KMgZHr38E7dHg=");
-//   background-size: cover;
-//   box-sizing:border-box;
-//   width: 100%;
-//   height: 100vh;
-//   display: flex;
-//   justify-content: flex-start;
-//   align-items: center;
-//   flex-direction: column;
-//   h1 {
-//     color: black;
-//     margin-top: none;
-//     font-size: 2rem;
-//   }
-// `;
+
+    body {
+        background-image: url("https://media.istockphoto.com/photos/hand-watering-young-plants-in-growing-picture-id1126962479?b=1&k=20&m=1126962479&s=170667a&w=0&h=Pjzibz8tfGau4ah9dNkZs8wycHCdD0KMgZHr38E7dHg=");
+        background-size: cover;
+        box-sizing:border-box;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        h1 {
+            color: black;
+            margin-top: none;
+            font-size: 2rem;
+        }
+    }
+`;
 // const StyledHeader = styled.header`
 //   color: ${({ theme }) => theme.secondaryColor};
 //   display: flex;
