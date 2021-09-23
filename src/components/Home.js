@@ -58,14 +58,14 @@ const StyledHome = styled.div`
     }
 
     .main {
-        background: white;
+        background: rgb(66, 126, 54, .5);
         width: 40%;
         margin: 0 auto;
         text-align: center;
         display: flex;
         flex-direction: column;
         margin-top: 10%;
-        border: 10px double #284b63;
+        border: none;
     }
 
     header, h1 {
@@ -76,13 +76,13 @@ const StyledHome = styled.div`
         margin: 0 auto;
         font-size: 60px;
         text-align: center;
-        color: #284b63;
+        color: white;
     }
 
     .main h3 {
         padding: 3%;
         font-size: 15px;
-        color: #3c6e71;
+        color: white;
     }
 
     .button-container  {
@@ -98,7 +98,7 @@ const StyledHome = styled.div`
     }
 
     button {
-        background-color: #284b63;
+        background-color: ${({ theme }) => theme.secondaryColor};
         padding: 15px;
         text-decoration: none;
         font-size: 15px;

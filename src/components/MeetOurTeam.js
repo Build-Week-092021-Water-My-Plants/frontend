@@ -3,99 +3,19 @@ import { Link } from 'react-router-dom'
 import styled from "styled-components";
 
 
-const StyledTeam = styled.div`
-    box-sizing: border-box;
-    
-
-    .whole {
-        width: 100%;
-        height: 100%;
-        background-color: #D9D9D9;
-    }
-
-    .main {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-evenly;
-        margin-top: 2%;
-    }
-
-    img {
-        width: 300px;
-        height: 300px;
-    }
-    
-    .card {
-        width: 300px;
-        padding: 1%;
-        box-shadow: 5px 10px #284b63;
-        border: 1px solid black;
-        margin-bottom: 2%;
-        margin-right: 1%;
-    }
-    .card p {
-        text-align: center;
-    }
-
-    .heading h1 {
-        font-size: 50px;
-        color: white;
-        flex-direction: row;
-        background-color: #284b63;
-        box-shadow: 5px 5px gray;
-        width: 35%;
-        margin: 0 auto;
-    
-    }
-
-    h2 {
-        text-align: left;
-        color: #284b63;
-        margin: 0;
-     }
-
-    h3 {
-        text-align: center;
-        color: #284b63;
-        font-size: 12px;
-    }
-
-    header {
-        margin-bottom: 2%;
-        
-    }
-
-    @media (max-width: 500px) {
-        #hide {
-            display: none;
-        }
-    }
-
-    @media (max-width: 800px) {
-        #hide {
-            display: none;
-        }
-    }
-`
 
 const MeetOurTeam = () => {
     return(
     <StyledTeam>
         <div className='whole'>
-            <header>
-                <h1 id='hide'>Water My Plants</h1>
-                <nav>
-                    <span className="navspans"><Link to="/">Home</Link></span>
-                    <span className="navspans"><Link to="/meet-our-team">Meet our Team</Link></span>
-                    <span className="navspans"><Link to="/login">Login</Link></span>
-                    <span className="navspans"><Link to="/signup">Sign-up</Link></span>
-                </nav>
-            </header>
-
-            <div className='heading'>
-                <h1>Meet Our Team</h1>
-            </div>
+        <StyledHeader>
+            <h1 id='hide'>Meet Our Team</h1>
+            <nav>
+                        <Link to="/">Home</Link>
+                        <Link to="/signup">Sign Up</Link>
+                        <Link to="/login">LogIn</Link>
+                    </nav>
+        </StyledHeader>
 
             <div className='main'>
 
@@ -153,11 +73,11 @@ const MeetOurTeam = () => {
                 <div className='card'>
                     <img
                         className='card-photo'
-                        src=''
-                        alt='profile of ADD NAME'
+                        src='https://ca.slack-edge.com/ESZCHB482-U02515419TL-cc9d6539a5a0-512'
+                        alt='Adam Smith'
                     />
-                    <h2>ADD TEAM MEMBER NAME</h2>
-                    <h3>add Role</h3>
+                    <h2>Adam Smith</h2>
+                    <h3>Fullstack Web & Computer Science Engineer</h3>
                 </div>
 {/* 
                 <div className='card'>
@@ -197,3 +117,103 @@ const MeetOurTeam = () => {
 }
 
 export default MeetOurTeam
+
+const StyledHeader = styled.header`
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  width: 100%;
+  height: 15%;
+  nav {
+    width: 35%;
+  }
+
+  nav a {
+    border: 1px solid ${(prop) => prop.theme.accentColor};
+    padding: 1%;
+    margin: 0.5%;
+    margin-right:5%;
+    color: black;
+    text-decoration: none;
+  }
+  nav a:hover {
+    border: 1px solid black;
+    color: white;
+  }`;
+const StyledTeam = styled.div`
+    box-sizing: border-box;
+    
+
+    .whole {
+        width: 100%;
+        height: 100%;
+        background-color: white;
+    }
+
+    .main {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 2%;
+    }
+
+    img {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .card {
+        width: 300px;
+        padding: 1%;
+        margin-bottom: 2%;
+        margin-right: 1%;
+        background-color: black;
+        border-radius: 7%;
+    }
+    .card p {
+        text-align: center;
+    }
+
+    .heading h1 {
+        font-size: 50px;
+        color: white;
+        flex-direction: row;
+        background-color: ${({ theme }) => theme.primaryColor};
+        width: 45%;
+        margin: 0 auto;
+    
+    }
+
+    h2 {
+        text-align: center;
+        color: ${({ theme }) => theme.secondaryColor};
+        margin: 0;
+     }
+
+    h3 {
+        text-align: center;
+        color: ${({ theme }) => theme.secondaryColor};
+        font-size: 12px;
+    }
+
+    header {
+        margin-bottom: 2%;
+        
+    }
+
+
+
+    @media (max-width: 500px) {
+        #hide {
+            display: none;
+        }
+    }
+
+    @media (max-width: 800px) {
+        #hide {
+            display: none;
+        }
+    }
+`;

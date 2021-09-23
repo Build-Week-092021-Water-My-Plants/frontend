@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import styled from "styled-components";
-import PrivateRoute from "./helpers/PrivateRoute";
 import Home from "./components/Home";
 import LoginForm from "./components/LoginForm";
 import SignupForm from "./components/SignupForm";
@@ -19,7 +18,7 @@ import Plant from "./Schema/AddPlant/Plant";
 
 
 const StyledBody = styled.div`
-  background-color: ${({ theme }) => theme.secondaryColor};
+background-color: ${({ theme }) => theme.secondaryColor};
   header {
     background-color: ${({ theme }) => theme.primaryColor};
   }
