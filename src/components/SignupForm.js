@@ -3,13 +3,17 @@ import axios from "axios";
 import { useHistory, Link } from "react-router-dom";
 import styled from "styled-components";
 
-const SignupForm = () => {
-    const [formValue, setFormValue] = useState({
+
+const initialValue = {
         username: "",
         password: "",
-        phoneNumber: "",
-    });
-    const { push } = useHistory();
+        phone_number: "",
+}
+
+const SignupForm = () => {
+    console.log('signupfrom.js ln:7')
+    const [formValue, setFormValue] = useState({initialValue});
+    // const { push } = useHistory();
 
     const handleChange = (e) => {
         setFormValue({
@@ -22,12 +26,12 @@ const SignupForm = () => {
         e.preventDefault();
         SignupForm(formValue);
         axios
-            .post("/", formValue)
+            .post("auth/register", formValue)
             .then((res) => {
                 console.log("loginform ln:28 response.data", res.data);
                 console.log("loginform ln:29 response.data.token", res.data.token);
                 // localStorage.setItem('token', payload)
-                push("/");
+                // push("/");
             })
             // setAuth(true);
             .catch((err) => console.log(err));
@@ -76,7 +80,7 @@ const SignupForm = () => {
                                 type="tel"
                                 name="phoneNumber"
                                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                                value={formValue.phoneNumber}
+                                value={formValue.phone_number}
                                 onChange={handleChange}
                                 placeholder="format=555-666-9999"
                             />

@@ -43,7 +43,6 @@ const handleSubmit = (e) => {
                 
                     <Link to="/signup">Sign Up</Link>
                 
-                
                     <Link to="/meet-our-team">Meet Our Team</Link>
                 
             </nav>
