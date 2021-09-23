@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 import { useHistory, Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { login } from '../actions';
 
 const LoginForm = (props) => {
     console.log('Login.js ln:5 props', props);
@@ -31,8 +33,9 @@ const LoginForm = (props) => {
                 .then(res => {
                     console.log('Login.js ln:30 res', res);//Use Lambda School to test
                     console.log('Login.js ln:31 res.data', res.data);
-                    console.log('Login.js ln:32 res.data', res.data.payload);
+                    // console.log('Login.js ln:32 res.data', res.data.payload);
                     localStorage.setItem("token", res.data.payload);
+                    props.login(res.data.user_id);
                     push('plantList');
                     setError("");
                 })
@@ -94,7 +97,8 @@ const LoginForm = (props) => {
     )
 }
 
-export default LoginForm;
+// export default LoginForm;
+export default connect (null, {login})(LoginForm)
 // const StyledBackground = styled.div`
 
 // `

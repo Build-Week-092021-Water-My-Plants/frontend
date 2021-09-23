@@ -10,11 +10,13 @@ import {
   } from '../actions/index';
 
 const initialState = {
-    user: {
-        username:'',
-        password:'',
-        phone:''
-    },
+    user: "",
+    // user: {
+    //     username:'',
+    //     password:'',
+    //     phone:''
+
+    // },
     plant: {
         id: null,
         nickname: '',

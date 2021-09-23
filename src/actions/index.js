@@ -46,6 +46,6 @@ export const edit = (edited) => {
   return { type: EDIT_PLANT, payload: edited };
 };
 
-export const login = (loginSuccess) => {
-  return { type: LOGIN, payload: loginSuccess };
+export const login = (userID) => {
+  return { type: LOGIN, payload: userID };
 };
