@@ -58,6 +58,7 @@ const LoginForm = (props) => {
         <StyledEditPlants>   
             <div className="loginForm"> 
         <StyledForm>
+            <h1>Log In</h1>
             <form onSubmit={handleSubmit} >
                 <label>Username: </label>
                     <input
@@ -142,8 +143,8 @@ const StyledEditPlants = styled.div`
     box-sizing: border-box;
     background: url("https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1380&q=80");
     background-size: cover;
-    width:auto;
-    height: 90vh;
+    width:100%;
+    height: auto;
     display: flex;
     justify-content: center;
     padding-top: 5%;
@@ -153,7 +154,6 @@ const StyledNav = styled.div`
     flex-direction:row;
     justify-content:space-around;
     align-items:center;
-    border:1px solid red;
 
     nav {
       width: 35%;
@@ -190,7 +190,7 @@ const StyledForm = styled.div `
         align-items:center;
         border-radius:10px;
         width:400px;
-        margin:2% 0%;
+        margin-bottom:20%;
         padding:2% 2%;
     }
     input {
@@ -233,7 +233,7 @@ const StyledForm = styled.div `
         background-size: cover;
         box-sizing:border-box;
         width: 100%;
-        height: 100vh;
+        height: auto;
         display: flex;
         justify-content: flex-start;
         align-items: center;
