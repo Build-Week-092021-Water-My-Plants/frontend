@@ -107,6 +107,7 @@ export default function AddPlant() {
             </header>
 
             <AddPlantForm
+                // key={}
                 formValues={formValues}
                 updateValues={updateValues}
                 submitForm={submitForm}
