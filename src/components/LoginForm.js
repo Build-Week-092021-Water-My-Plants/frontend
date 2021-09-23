@@ -55,7 +55,7 @@ const LoginForm = (props) => {
                     <span className='navspans'></span>
                     <Link to="/meet-our-team">Meet Our Team</Link>
                     <span className='navspans'></span>
-                    <Link to="/login">Log-In</Link>
+                    <Link to="/signup">Sign-Up</Link>
                 </nav>
                 </div>
         </StyledNav>
