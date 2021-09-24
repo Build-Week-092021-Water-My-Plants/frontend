@@ -16,14 +16,7 @@ const initialState = {
         password: '',
         phone_number: ''
     },
-    // plant: {
-    //     id: null,
-    //     nickname: '',
-    //     species: '',
-    //     // h2oInterval: '',
-    //     h2oFrequency: '',
-    //     // image: ''
-    // },
+
     plantList: [],
 };
 
