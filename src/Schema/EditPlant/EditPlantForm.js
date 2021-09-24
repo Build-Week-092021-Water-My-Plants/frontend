@@ -1,39 +1,29 @@
 import React, { useEffect } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import styled from "styled-components";
-// import { axiosWithAuth } from "../../axiosWithAuth";
 
 export default function EditPlantForm(props) {
-    const { values, change, disabled, errors, setValues } = props;
-    const { plantID } = useParams()
+    console.log('EditPlantForm.js ln:6 props', props);
+    const { values, change, disabled, errors, setValues, submitForm } = props;
+    // const { plantID } = useParams()
     const history = useHistory();
-
-    // useEffect(() => {
-    //     axiosWithAuth()
-    //         .get(`/api/plants/${plantID}`)
-    //         .then(res => {setValues(res.data)})
-    //         .catch(err => {console.log(err)})
-    // },[plantID, setValues])
-
+    
+    const onSubmit = (event) => {
+        event.preventDefault();
+        submitForm();
+        history.push('/EditPlantSuccess');
+    }
     const onChange = (event) => {
         const { name, value } = event.target
         change(name, value)
     }
-    const submit = (event) => {
-        event.preventDefault();
-        // axiosWithAuth().put(`/api/plants/${plantID}`, values)
-        //     .then(res => {console.log('item edited:', res)})
-        history.push('/EditPlantSuccess');
-    }
     return (
         <div>
-        <StyledEditPlantForm>
-              <form
+            <StyledEditPlantForm>
+                <form onSubmit={onSubmit}
                     className="add-plant contatiner"
-                    id="add-plant-form"
-                    onChange={onChange}
-                    submit={submit}
-                >
+                    id="add-plant-form">
+
                     <div className="form-group submit">
                         <h2>Edit Plant</h2>
                     </div>
@@ -50,17 +40,6 @@ export default function EditPlantForm(props) {
                             id="name-input"
                         />
                     </label>
-
-                    {/* <label>
-                        h2oInterval:
-                        <input
-                            name="h2oInterval"
-                            value={values.h2oInterval}
-                            type="number"
-                            onChange={onChange}
-                            placeholder="number times per month"
-                        />
-                    </label> */}
                     <label>
                         Species
                         <input
@@ -71,15 +50,14 @@ export default function EditPlantForm(props) {
                             onChange={onChange}
                         />
                     </label>
-
                     <label>
-                        h2oAmount:
+                        Times Per/mo.
                         <input
-                            name="h2oAmount"
-                            value={values.h2oAmount}
-                            type="text"
-                            onChange={onChange}
+                            type="number"
+                            name="h2oFrequency"
                             placeholder="How much water?"
+                            value={values.h2oFrequency}
+                            onChange={onChange}
                         />
                     </label>
 
@@ -96,7 +74,7 @@ export default function EditPlantForm(props) {
                     <div>
                     </div>
                 </form>
-        </StyledEditPlantForm>
+            </StyledEditPlantForm>
         </div>
     )
 }
