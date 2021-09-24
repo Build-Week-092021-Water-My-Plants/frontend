@@ -17,6 +17,7 @@ const Home = () => {
                     <span className="navspans"> */}
                         <Link to="/meet-our-team"> Meet Our Team </Link>
                     {/* </span> */}
+                    <Link to="/logout" className="logout" > Log Out </Link>
                 </nav>
             </header>
 
@@ -47,10 +48,9 @@ const StyledHome = styled.div`
     box-sizing: border-box;
     width:100%;
     height: auto;
-    background: url("https://media.istockphoto.com/photos/hand-watering-young-plants-in-growing-picture-id1126962479?b=1&k=20&m=1126962479&s=170667a&w=0&h=Pjzibz8tfGau4ah9dNkZs8wycHCdD0KMgZHr38E7dHg=");
+    background: url("https://images.unsplash.com/reserve/SLErBhmTnePXNTLk33fw_DSCF3308.jpg?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
 
     .whole {
         display: flex;
@@ -59,23 +59,24 @@ const StyledHome = styled.div`
     }
 
     .main {
-        background: rgb(200, 200, 200, .3);
+        background: rgb(250, 250, 250, .5);
         width: 40%;
         margin: 0 auto;
         text-align: center;
         display: flex;
         flex-direction: column;
-        margin-top: 10%;
-        margin-bottom:10%;
+        margin-top: 8%;
+        margin-bottom: 10%;
         border: none;
+        border-radius: 10%;
     }
 
     header, h1 {
-        margin: 0 10px;
+        width: 100%;
     }
 
     nav {
-        width: 30%;
+        width: 40%;
         white-space: nowrap;
     }
     nav a {
@@ -90,17 +91,21 @@ const StyledHome = styled.div`
         color: white;
     }
 
+.logout{
+    margin-right: 20px;
+}
+
     .main h1 {
         margin: 0 auto;
         font-size: 60px;
         text-align: center;
-        color: ${({ theme }) => theme.secondaryColor};
+        color: ${({ theme }) => theme.primaryColor};
     }
 
     .main h3 {
         padding: 3%;
         font-size: 15px;
-        color: white;
+        color: ${({ theme }) => theme.secondaryColor};
     }
 
     .button-container  {
@@ -113,14 +118,16 @@ const StyledHome = styled.div`
         align-items: center;
         background: none;
         margin: 5%;
+        text-decoration: none;
     }
 
     button {
-        background-color: ${({ theme }) => theme.secondaryColor};
+        background-color: ${({ theme }) => theme.primaryColor};
         padding: 15px;
-        text-decoration: none;
         font-size: 15px;
         color: #d9d9d9;
+        border-radius: 20%;
+        border: 1px solid green;
     }
 
     @media (max-width: 500px) {
@@ -143,6 +150,7 @@ const StyledHome = styled.div`
         .button-container {
             margin-left: 13%;
             width: 100%;
+            text-decoration: none;
         }
     };
 
