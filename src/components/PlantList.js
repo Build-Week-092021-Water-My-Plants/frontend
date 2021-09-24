@@ -8,7 +8,7 @@ import { useHistory, Link } from 'react-router-dom';
 import axiosWithAuth from "../helpers/axiosWithAuth";
 
 const PlantList = (props) => {
-    console.log("PlantList.js ln:10 props", props);
+    // console.log("PlantList.js ln:10 props", props);
     const { plant, isFetching, error } = props;
     const history = useHistory();
 
@@ -24,7 +24,7 @@ const PlantList = (props) => {
     }
 
     const deleteItem = (plant) => {
-        console.log('PlantList.js ln:31 plant', plant);
+        // console.log('PlantList.js ln:27 plant', plant);
         axiosWithAuth()
             .delete(`plants/${plant.plant_id}`)
             .then((res) => {
@@ -38,14 +38,6 @@ const PlantList = (props) => {
 
     const editPlant = (plant) => {
         console.log('PlantList.js ln:51 plant', plant);
-        // axiosWithAuth()
-        //     .delete(`/api/plants/${plant.plantID}`)
-        //     .then((res) => {
-        //         // console.log(res);
-        //         deletePlant(plant.plantID);
-        //         history.push("editPlant");
-        //     })
-        //     .catch((err) => console.log(err));
         deleteItem(plant);
         history.push("editPlant");
     };
@@ -59,11 +51,12 @@ const PlantList = (props) => {
                     <Link to="/plantList"> My Plants </Link>
                     <Link to="/addPlant"> Add Plants </Link>
                     <Link to="/meet-our-team"> Meet Our Team </Link>
+                    <Link to="/logout">Logout</Link>
                 </nav>
             </header>
             <main className="plant-list">
                 {plant.map((plant) => (
-                    <div className="plant-card" key={plant.plantID}>
+                    <div className="plant-card" key={plant.plant_id}>
                         <div className="plant-details">
                             <h2>{plant.nickname}</h2>
                             <p>Amount of Water Needed: {plant.h2oFrequency}</p>

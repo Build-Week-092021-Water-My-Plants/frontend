@@ -14,6 +14,7 @@ import EditPlantSuccess from "./Schema/EditPlant/EditPlantSuccess";
 import './App.css';
 import Plant from "./Schema/AddPlant/Plant";
 import PrivateRoute from './components/PrivateRoute';
+import Logout from "./components/Logout";
 
 
 
@@ -32,10 +33,6 @@ background-color: ${({ theme }) => theme.secondaryColor};
   }
 `;
 
-const logout = () => {
-  localStorage.removeItem("token");
-  window.location.href = "login";
-}
 
 function App() {
   return (
@@ -43,13 +40,14 @@ function App() {
       <div className="App">
         <StyledBody className="App">
           <Switch>
-          <Route path='/addsuccess' component={AddSuccess} />
-          <Route path='/addPlant' component={AddPlant} />
-          <Route path='/SignupSuccess' component={SignUpSuccess} />
+          <PrivateRoute path='/addsuccess' component={AddSuccess} />
+          <PrivateRoute path='/addPlant' component={AddPlant} />
+          <PrivateRoute path='/SignupSuccess' component={SignUpSuccess} />
           <PrivateRoute path='/plantList' component={PlantList} />
-          <Route path='/editPlant' component={EditPlant} />
-          <Route path='/editPlantSuccess' component={EditPlantSuccess} />
-          <Route exact path="/plant" component={ Plant }/>
+          <PrivateRoute path='/editPlant' component={EditPlant} />
+          <PrivateRoute path='/editPlantSuccess' component={EditPlantSuccess} />
+          <PrivateRoute exact path="/plant" component={ Plant }/>
+          <Route path="/logout" component={Logout}/>
 
             <Route path="/login">
               <LoginForm />
