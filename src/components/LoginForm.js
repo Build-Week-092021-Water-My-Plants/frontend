@@ -5,8 +5,8 @@ import { useHistory, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { login } from '../actions';
 
-const LoginForm = (props) => {
-    console.log('Login.js ln:5 props', props);
+const LoginForm = () => {
+    // console.log('Login.js ln:5 props', props);
     const [credentials, setCredentials] = useState(
         {
             username: "",
@@ -32,10 +32,10 @@ const LoginForm = (props) => {
             axios.post('https://waterplantsbackend.herokuapp.com/api/auth/login', credentials)
                 .then(res => {
                     // console.log('Login.js ln:30 res', res);//Use Lambda School to test
-                    // console.log('Login.js ln:31 res.data', res.data);
-                    localStorage.setItem("token", res.data.payload);
+                    console.log('Login.js ln:31 res.data', res.data);
+                    localStorage.setItem("token", res.data.token);
                     localStorage.setItem("user_id", res.data.user_id)
-                    props.login(res.data.user_id);
+                    login(res.data);
                     push('plantList');
                     setError("");
                 })
@@ -83,6 +83,7 @@ const LoginForm = (props) => {
         </StyledForm>
             </div>
         </StyledEditPlants>
+        <p id="error" className="error">{error}</p>
             </div>
     )
 }

@@ -15,8 +15,8 @@ export const getPlants = () => {
     dispatch(fetchStart());
     axiosWithAuth().get('plants')
       .then(res => {
-        console.log('actions/index.js ln:17 res', res);
-        console.log('actions/index.js ln:17 res.data', res.data);
+        // console.log('actions/index.js ln:17 res', res);
+        // console.log('actions/index.js ln:18 res.data', res.data);
         dispatch(fetchPlantSuccess(res.data))
       })
   }
