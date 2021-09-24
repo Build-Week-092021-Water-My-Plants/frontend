@@ -2,14 +2,14 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useHistory } from "react-router";
 import { connect } from "react-redux";
-import { getPlants, fetchFail } from "../actions";
+import { getPlants, fetchFail, deletePlant } from "../actions";
 import { Link } from "react-router-dom";
-// import { axiosWithAuth } from "../axiosWithAuth";
+import axiosWithAuth from "../helpers/axiosWithAuth";
 
 const PlantList = (props) => {
     console.log("PlantList.js ln:10 props", props);
     const { plant, isFetching, error } = props;
-    const [plants, setPlants] = useState([]);
+    // const [plants, setPlants] = useState([]);
     const history = useHistory();
 
     useEffect(() => {
@@ -29,23 +29,24 @@ const PlantList = (props) => {
 
     const deleteItem = (plant) => {
         console.log('PlantList.js ln:31 plant', plant);
-        // axiosWithAuth()
-        //     .delete(`/api/plants/${plant.plantID}`)
-        //     .then((res) => {
-        //         // console.log(res);
-        //         deletePlant(plant.plantID);
-        //         axiosWithAuth()
-        //             .get("/api/plants")
-        //             .then((res) => {
-        //                 // console.log(res)
-        //                 setPlants(res.data);
-        //                 // console.log('plants: ', plants);
-        //             })
-        //             .catch((err) => {
-        //                 console.log(err);
-        //             });
-        //     })
-        //     .catch((err) => console.log(err));
+        axiosWithAuth()
+            .delete(`plants/${plant.plant_id}`)
+            .then((res) => {
+                console.log(res);
+                console.log('Plant.plant_id', plant.plant_id);
+                props.deletePlant(plant.plant_id);
+                // axiosWithAuth()
+                //     .get("/api/plants")
+                //     .then((res) => {
+                //         // console.log(res)
+                //         setPlants(res.data);
+                //         // console.log('plants: ', plants);
+                //     })
+                //     .catch((err) => {
+                //         console.log(err);
+                //     });
+            })
+            .catch((err) => console.log(err));
     };
 
     const editPlant = (plant) => {
@@ -72,7 +73,7 @@ const PlantList = (props) => {
                 </nav>
             </header>
             <main className="plant-list">
-                {props.plant.map((plant) => (
+                {plant.map((plant) => (
                     <div className="plant-card" key={plant.plantID}>
                         <div className="plant-details">
                             <h2>{plant.nickname}</h2>
@@ -90,13 +91,14 @@ const PlantList = (props) => {
 
 const mapStateToProps = (state) => {
     return {
-        plant: state.plant,
+        plant: state.plantList,
         isFetching: state.isFetching,
         error: state.error,
+
     };
 };
 
-export default connect(mapStateToProps, { getPlants, fetchFail })(PlantList);
+export default connect(mapStateToProps, { getPlants, fetchFail, deletePlant })(PlantList);
 
 const Plantlist = styled.div`
   .plant-card {
