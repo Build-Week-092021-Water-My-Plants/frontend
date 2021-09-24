@@ -6,7 +6,8 @@ export const LOGIN = 'LOGIN';
 export const GET_PLANT = 'GET_PLANT';
 export const FETCH_START = "FETCH_START";
 export const FETCH_PLANT_SUCCESS = "FETCH_PLANT_SUCCESS ";
-export const FETCH_FAIL = "FETCH_FAI";
+export const FETCH_FAIL = "FETCH_FAIL";
+export const DELETE_PLANT = "DELETE_PLANT";
 
 
 export const getPlants = () => {
@@ -50,3 +51,7 @@ export const edit = (edited) => {
 export const login = (userID) => {
   return { type: LOGIN, payload: userID };
 };
+
+export const deletePlant = (plantId) => {
+  return { type: DELETE_PLANT, payload: plantId}
+}

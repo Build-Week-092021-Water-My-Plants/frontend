@@ -6,50 +6,51 @@ import {
     GET_PLANT,
     FETCH_START,
     FETCH_PLANT_SUCCESS,
-    FETCH_FAIL
-  } from '../actions/index';
+    FETCH_FAIL,
+    DELETE_PLANT
+} from '../actions/index';
 
 const initialState = {
     user: {
-        username:'',
-        password:'',
-        phone_number:''
+        username: '',
+        password: '',
+        phone_number: ''
     },
-    plant: {
-        id: null,
-        nickname: '',
-        species: '',
-        // h2oInterval: '',
-        h2oFrequency: '',
-        // image: ''
-    },
+    // plant: {
+    //     id: null,
+    //     nickname: '',
+    //     species: '',
+    //     // h2oInterval: '',
+    //     h2oFrequency: '',
+    //     // image: ''
+    // },
     plantList: [],
 };
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case(FETCH_START):
-        return({
-            ...state, 
-            isFetching: true, 
-            error: ''
-        })
-        case(FETCH_PLANT_SUCCESS):
-        return({
-            ...state, 
-            plant: action.payload,
-            isFetching: false
-        })
-        case (FETCH_FAIL):
-            return({
+        case (FETCH_START):
+            return ({
                 ...state,
-                isFetching: false, 
+                isFetching: true,
+                error: ''
+            })
+        case (FETCH_PLANT_SUCCESS):
+            return ({
+                ...state,
+                plantList: action.payload,
+                isFetching: false
+            })
+        case (FETCH_FAIL):
+            return ({
+                ...state,
+                isFetching: false,
                 error: action.payload
             })
         case ADD_PLANT:
             return {
                 ...state,
-                item: action.payload,
+                plantList: [...state.plantList, action.payload]
             };
 
         case NEW_USER:
@@ -76,12 +77,17 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 user: action.payload,
             };
+        case DELETE_PLANT:
+            return {
+                ...state,
+                plantList: state.plantList.filter((plant)=>plant.plant_id !==action.payload)
+            }
 
         default:
             return state;
     }
 };
-      
+
 
 
 export default reducer;
