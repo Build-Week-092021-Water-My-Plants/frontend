@@ -66,7 +66,7 @@ const PlantList = (props) => {
                     <div className="plant-card" key={plant.plantID}>
                         <div className="plant-details">
                             <h2>{plant.nickname}</h2>
-                            <p>Amount of Water Needed: {plant.h2oAmount}</p>
+                            <p>Amount of Water Needed: {plant.h2oFrequency}</p>
                             <p>Species: {plant.species}</p>
                             <button onClick={() => editPlant(plant)}>Edit</button>{" "}
                             <button onClick={() => deleteItem(plant)}>Delete</button>

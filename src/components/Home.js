@@ -59,7 +59,7 @@ const StyledHome = styled.div`
     }
 
     .main {
-        background: rgb(66, 126, 54, .5);
+        background: rgb(200, 200, 200, .3);
         width: 40%;
         margin: 0 auto;
         text-align: center;
@@ -94,7 +94,7 @@ const StyledHome = styled.div`
         margin: 0 auto;
         font-size: 60px;
         text-align: center;
-        color: white;
+        color: ${({ theme }) => theme.secondaryColor};
     }
 
     .main h3 {
