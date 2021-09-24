@@ -75,7 +75,6 @@ const SignupForm = () => {
                             <input
                                 type="tel"
                                 name="phone_number"
-                                placeholder="Phone"
                                 // pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                                 value={formValue.phone_number}
                                 onChange={handleChange}

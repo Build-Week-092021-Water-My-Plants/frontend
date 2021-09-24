@@ -8,7 +8,7 @@ import { useHistory, Link } from 'react-router-dom';
 import axiosWithAuth from "../helpers/axiosWithAuth";
 
 const PlantList = (props) => {
-    console.log("PlantList.js ln:10 props", props);
+    // console.log("PlantList.js ln:10 props", props);
     const { plant, isFetching, error } = props;
     const history = useHistory();
 
@@ -56,7 +56,7 @@ const PlantList = (props) => {
             </header>
             <main className="plant-list">
                 {plant.map((plant) => (
-                    <div className="plant-card" key={plant.plantID}>
+                    <div className="plant-card" key={plant.plant_id}>
                         <div className="plant-details">
                             <h2>{plant.nickname}</h2>
                             <p>Amount of Water Needed: {plant.h2oAmount}</p>

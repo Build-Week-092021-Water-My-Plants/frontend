@@ -1,11 +1,10 @@
-import React, { useEffect } from "react";
-import { useHistory, useParams } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 
 export default function EditPlantForm(props) {
     // console.log('EditPlantForm.js ln:6 props', props);
-    const { values, change, disabled, errors, setValues, submitForm } = props;
-    // const { plantID } = useParams()
+    const { values, change, disabled, errors, submitForm } = props;
+  
     const history = useHistory();
     
     const onSubmit = (event) => {
