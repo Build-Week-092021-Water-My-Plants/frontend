@@ -133,7 +133,7 @@ const StyledHeader = styled.header`
   display: flex;
   justify-content: flex-end;
   align-items: baseline;
-  width: 100%;
+  width: auto;
   height: 15%;
   nav {
     width: 35%;
@@ -142,15 +142,63 @@ const StyledHeader = styled.header`
   nav a {
     border: 1px solid ${(prop) => prop.theme.accentColor};
     padding: 1%;
-    margin: 0.5%;
-    margin-right:5%;
     color: black;
     text-decoration: none;
   }
   nav a:hover {
     border: 1px solid black;
     color: white;
-  }`;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 14px;
+
+    #hide {
+    display: none;
+    }
+
+    .main {
+        margin-top: 40%;
+        height: auto;
+        width: auto;
+    }
+
+    nav {
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        flex-grow: 4;
+    }
+
+    .button-container {
+        margin-left: 13%;
+        width: 100%;
+        text-decoration: none;
+    }
+    .whole{
+        width: 100%;
+    }
+
+  @media (max-width: 800px) {
+    font-size: 14px;
+    
+    #hide {
+            display: none;
+        }
+    .main {
+        margin-top: 20%;
+
+    }
+    nav {
+        width: 100%;
+    }
+    
+    .button-container {
+        margin-left: 19%;
+        width: 100%;
+    }
+}
+  `;
 const StyledTeam = styled.div`
     box-sizing: border-box;
     
