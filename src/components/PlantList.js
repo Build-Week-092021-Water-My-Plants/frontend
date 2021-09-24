@@ -4,7 +4,7 @@ import { useHistory } from "react-router";
 import { connect } from "react-redux";
 import { getPlants, fetchFail } from "../actions";
 import { Link } from "react-router-dom";
-// import { axiosWithAuth } from "../axiosWithAuth";
+import axiosWithAuth from "../helpers/axiosWithAuth";
 
 const PlantList = (props) => {
     console.log("PlantList.js ln:10 props", props);
@@ -23,29 +23,29 @@ const PlantList = (props) => {
         return <h2>Error: {error}</h2>;
     }
 
-    // const deletePlant = (id) => {
-    //     setPlants(plants.filter((plant) => plant.id !== id));
-    // };
+    const deletePlant = (id) => {
+        setPlants(plants.filter((plant) => plant.id !== id));
+    };
 
     const deleteItem = (plant) => {
         console.log('PlantList.js ln:31 plant', plant);
-        // axiosWithAuth()
-        //     .delete(`/api/plants/${plant.plantID}`)
-        //     .then((res) => {
-        //         // console.log(res);
-        //         deletePlant(plant.plantID);
-        //         axiosWithAuth()
-        //             .get("/api/plants")
-        //             .then((res) => {
-        //                 // console.log(res)
-        //                 setPlants(res.data);
-        //                 // console.log('plants: ', plants);
-        //             })
-        //             .catch((err) => {
-        //                 console.log(err);
-        //             });
-        //     })
-        //     .catch((err) => console.log(err));
+        axiosWithAuth()
+            .delete(`plants/${plant.plantID}`)
+            .then((res) => {
+                // console.log(res);
+                deletePlant(plant.plantID);
+                axiosWithAuth()
+                    .get("/api/plants")
+                    .then((res) => {
+                        // console.log(res)
+                        setPlants(res.data);
+                        // console.log('plants: ', plants);
+                    })
+                    .catch((err) => {
+                        console.log(err);
+                    });
+            })
+            .catch((err) => console.log(err));
     };
 
     const editPlant = (plant) => {
@@ -72,7 +72,7 @@ const PlantList = (props) => {
                 </nav>
             </header>
             <main className="plant-list">
-                {props.plant.map((plant) => (
+                {plant.map((plant) => (
                     <div className="plant-card" key={plant.plantID}>
                         <div className="plant-details">
                             <h2>{plant.nickname}</h2>
