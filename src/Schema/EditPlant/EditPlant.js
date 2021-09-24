@@ -41,7 +41,7 @@ const EditPlant = (props) => {
                 props.add(res.data.user_id);
             })
             .catch((err) => {
-                debugger;
+                // debugger;
                 console.log(err);
             })
 
