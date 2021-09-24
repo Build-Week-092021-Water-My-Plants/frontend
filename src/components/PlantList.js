@@ -24,7 +24,7 @@ const PlantList = (props) => {
     }
 
     const deleteItem = (plant) => {
-        console.log('PlantList.js ln:31 plant', plant);
+        // console.log('PlantList.js ln:27 plant', plant);
         axiosWithAuth()
             .delete(`plants/${plant.plant_id}`)
             .then((res) => {
@@ -38,14 +38,6 @@ const PlantList = (props) => {
 
     const editPlant = (plant) => {
         console.log('PlantList.js ln:51 plant', plant);
-        // axiosWithAuth()
-        //     .delete(`/api/plants/${plant.plantID}`)
-        //     .then((res) => {
-        //         // console.log(res);
-        //         deletePlant(plant.plantID);
-        //         history.push("editPlant");
-        //     })
-        //     .catch((err) => console.log(err));
         deleteItem(plant);
         history.push("editPlant");
     };
@@ -59,6 +51,7 @@ const PlantList = (props) => {
                     <Link to="/plantList"> My Plants </Link>
                     <Link to="/addPlant"> Add Plants </Link>
                     <Link to="/meet-our-team"> Meet Our Team </Link>
+                    <Link to="/logout">Logout</Link>
                 </nav>
             </header>
             <main className="plant-list">

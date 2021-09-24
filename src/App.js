@@ -43,13 +43,14 @@ function App() {
       <div className="App">
         <StyledBody className="App">
           <Switch>
-          <Route path='/addsuccess' component={AddSuccess} />
-          <Route path='/addPlant' component={AddPlant} />
-          <Route path='/SignupSuccess' component={SignUpSuccess} />
+          <PrivateRoute path='/addsuccess' component={AddSuccess} />
+          <PrivateRoute path='/addPlant' component={AddPlant} />
+          <PrivateRoute path='/SignupSuccess' component={SignUpSuccess} />
           <PrivateRoute path='/plantList' component={PlantList} />
-          <Route path='/editPlant' component={EditPlant} />
-          <Route path='/editPlantSuccess' component={EditPlantSuccess} />
-          <Route exact path="/plant" component={ Plant }/>
+          <PrivateRoute path='/editPlant' component={EditPlant} />
+          <PrivateRoute path='/editPlantSuccess' component={EditPlantSuccess} />
+          <PrivateRoute exact path="/plant" component={ Plant }/>
+          <Route path="/logout" />
 
             <Route path="/login">
               <LoginForm />

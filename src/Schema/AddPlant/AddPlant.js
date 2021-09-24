@@ -101,7 +101,9 @@ const h2oFrequency = formValues.h2oFrequency
                 <nav>
                     <Link to="/">Home</Link>
                     <Link to="/login">Log-In</Link>
+                    <Link to="/plantList">My Plants</Link>
                     <Link to="/meet-our-team">Meet Our Team</Link>
+                    <Link to="/logout">Logout</Link>
                 </nav>
             </header>
 
