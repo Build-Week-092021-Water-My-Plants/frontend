@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import styled from 'styled-components';
 
 export default function AddPlantForm(props) {
-    console.log('AddPlantForm.js ln:6');
+    // console.log('AddPlantForm.js ln:6');
     const { formValues, updateValues, submitForm, disabled, errors } = props;
 
     const history = useHistory();
@@ -26,7 +26,9 @@ export default function AddPlantForm(props) {
     return (
         <StyledAddPlantForm>
             <form onSubmit={onSubmit}>
+
             <h1>Plant Form</h1>
+
                 <div className="inputs">
                     <label>
                         <input 

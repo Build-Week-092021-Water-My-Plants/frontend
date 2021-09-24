@@ -32,6 +32,11 @@ background-color: ${({ theme }) => theme.secondaryColor};
   }
 `;
 
+const logout = () => {
+  localStorage.removeItem("token");
+  window.location.href = "login";
+}
+
 function App() {
   return (
     <Router>

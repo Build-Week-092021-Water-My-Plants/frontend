@@ -31,9 +31,8 @@ const LoginForm = (props) => {
         } else {
             axios.post('https://waterplantsbackend.herokuapp.com/api/auth/login', credentials)
                 .then(res => {
-                    console.log('Login.js ln:30 res', res);//Use Lambda School to test
-                    console.log('Login.js ln:31 res.data', res.data);
-                    // console.log('Login.js ln:32 res.data', res.data.payload);
+                    // console.log('Login.js ln:30 res', res);//Use Lambda School to test
+                    // console.log('Login.js ln:31 res.data', res.data);
                     localStorage.setItem("token", res.data.payload);
                     localStorage.setItem("user_id", res.data.user_id)
                     props.login(res.data.user_id);

@@ -17,7 +17,7 @@ const formSchema = yup.object().shape({
     //     .required("Please list daily, weeekly, monthly"),
     h2oFrequency: yup
         .string()
-        .trim()
+        // .trim()
         .required('How often should you water this beaut?'),
 }
 )

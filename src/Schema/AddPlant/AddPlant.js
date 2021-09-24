@@ -11,30 +11,27 @@ import { add } from '../../actions/index'
 const initialValues = {
     nickname: '',
     species: '',
-    h2oAmount: '',
-    // h2oInterval: "",
-    // image: ''
-}
+    h2oFrequency: '',
+};
 
 const initialErrors = {
     nickname: '',
-    h2oFrequency: '',
     species: '',
-    // h2oInterval: "",
+    h2oFrequency: '',
 }
 
 const initialPlantList = [];
 const initialDisabled = true;
 
 const AddPlant = (props) => {
-    console.log('AddPlant.js ln:30 props', props);
+    // console.log('AddPlant.js ln:30 props', props);
     const [plantList, setPlantList] = useState(initialPlantList);
     const [formValues, setFormValues] = useState(initialValues);
     const [errors, setErrors] = useState(initialErrors);
     const [disabled, setDisabled] = useState(initialDisabled);
 
     const postNewPlant = (newPlant) => {
-        console.log('AddPlant.js ln:34', newPlant)
+        // console.log('AddPlant.js ln:34', newPlant)
         axiosWithAuth()
             .post("plants", newPlant)
             .then((res) => {
@@ -76,11 +73,7 @@ const AddPlant = (props) => {
         });
     }, [formValues]);
 
-    // const updateValues = (formName, formValue) => {
-    //     console.log(formName, formValue);
-    //     validate(formName, formValue);
-    //     setFormValues({ ...formValues, [formName]: formValue });
-    // }
+ 
     const updateValues = (name, value) => {
         validate(name, value);
         setFormValues({ ...formValues, [name]: value });
@@ -99,7 +92,6 @@ const h2oFrequency = formValues.h2oFrequency
             
         }
         postNewPlant(newPlant);
-
     }
 
     return (
