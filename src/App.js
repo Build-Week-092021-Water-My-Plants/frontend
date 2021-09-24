@@ -14,6 +14,7 @@ import EditPlantSuccess from "./Schema/EditPlant/EditPlantSuccess";
 import './App.css';
 import Plant from "./Schema/AddPlant/Plant";
 import PrivateRoute from './components/PrivateRoute';
+import Logout from "./components/Logout";
 
 
 
@@ -50,7 +51,7 @@ function App() {
           <PrivateRoute path='/editPlant' component={EditPlant} />
           <PrivateRoute path='/editPlantSuccess' component={EditPlantSuccess} />
           <PrivateRoute exact path="/plant" component={ Plant }/>
-          <Route path="/logout" />
+          <Route path="/logout" component={Logout}/>
 
             <Route path="/login">
               <LoginForm />
