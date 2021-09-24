@@ -5,7 +5,7 @@ import styled from "styled-components";
 const Home = () => {
     return (
         <StyledHome>
-            <header>
+            <header id="header">
                 <h1 id="hide"> Water My Plants </h1>
                 <nav>
                     {/* <span className="navspans"> */}
@@ -81,7 +81,7 @@ const StyledHome = styled.div`
         display: flex;
         justify-content: flex-end;
     }
-    header{
+    #header{
         background-color: rgb(0, 0, 0, .3);
     }
 

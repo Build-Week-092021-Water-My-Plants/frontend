@@ -46,9 +46,10 @@ const LoginForm = () => {
     }
 
     return (
-    <div className="body">
+        <div className="body">
+            <header>
         <StyledNav>
-                <h1 className="title">WATER MY PLANTS</h1>
+                <h1 id="hide">WATER MY PLANTS</h1>
                 <nav>
                     <Link to="/">Home</Link>
                     <span className='navspans'></span>
@@ -57,6 +58,7 @@ const LoginForm = () => {
                     <Link to="/signup">Sign-Up</Link>
                 </nav>
         </StyledNav>
+        </header>
     <StyledEditPlants>   
             <div className="loginForm"> 
         <StyledForm>
@@ -102,23 +104,67 @@ const StyledEditPlants = styled.div`
 `        
 const StyledNav = styled.div`
     display:flex;
-    justify-content:space-around;
-    align-items:center;
+    justify-content:flex-end;
+    align-items:baseline;
+    width: 100%;
 
+    header, h1 {
+        width: auto;
+        display: flex;
+        justify-content: flex-end;
+    }
     nav {
-      width: 35%;
-      white-space:nowrap;
+        width: 100%;
+        white-space: nowrap;
     }
     nav a {
-      border: 1px solid ${(prop) => prop.theme.accentColor};
-      padding: 1%;
-      margin: 0.5%;
-      color: black;
-      text-decoration: none;
+        border: 1px solid ${(prop) => prop.theme.accentColor};
+        padding: 1%;
+        margin: 0.2%;
+        color: black;
+        text-decoration: none;
     }
     nav a:hover {
-      border: 1px solid black;
-      color: white;
+        border: 1px solid black;
+        color: white;
+    }
+    @media (max-width: 500px) {
+        font-size: 14px;
+
+        #hide {
+        display: none;
+        }
+
+        nav {
+            width: 100%;
+            display:flex;
+            flex-direction: column;
+            flex-grow: 4;
+        }
+
+        .button-container {
+            margin-left: 13%;
+            width: 100%;
+            text-decoration: none;
+        }
+    };
+
+    @media (max-width: 800px) {
+        font-size: 14px;
+        
+        #hide {
+                display: none;
+            }
+
+        }
+        nav {
+            width: 100%;
+        }
+        
+        .button-container {
+            margin-left: 19%;
+            width: 100%;
+        }
     }
 `;
 
@@ -194,6 +240,8 @@ const StyledForm = styled.div `
             margin-top: none;
             font-size: 2rem;
         }
+
+        
     }
 `;
 // const StyledHeader = styled.header`
