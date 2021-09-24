@@ -100,4 +100,9 @@ const Plantlist = styled.div`
     position: relative;
     margin: 1rem auto;
   }
+
+  .plant-list{
+      display: flex;
+      flex-wrap: wrap;
+  }
 `;
