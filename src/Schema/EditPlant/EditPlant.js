@@ -14,8 +14,8 @@ const initialFormValues = {
 const initialFormErrors = {
     nickname: "",
     species: "",
-    // h2oInterval: 0,
     h2oAmount: "",
+    // h2oInterval: 0,
     // image: "",
 };
 
