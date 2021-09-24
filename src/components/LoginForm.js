@@ -49,7 +49,6 @@ const LoginForm = (props) => {
     return (
     <div className="body">
         <StyledNav>
-        <div className="navBar">
                 <h1 className="title">WATER MY PLANTS</h1>
                 <nav>
                     <Link to="/">Home</Link>
@@ -58,7 +57,6 @@ const LoginForm = (props) => {
                     <span className='navspans'></span>
                     <Link to="/signup">Sign-Up</Link>
                 </nav>
-                </div>
         </StyledNav>
     <StyledEditPlants>   
             <div className="loginForm"> 
@@ -104,12 +102,12 @@ const StyledEditPlants = styled.div`
 `        
 const StyledNav = styled.div`
     display:flex;
-    flex-direction:row;
     justify-content:space-around;
     align-items:center;
 
     nav {
       width: 35%;
+      white-space:nowrap;
     }
     nav a {
       border: 1px solid ${(prop) => prop.theme.accentColor};
