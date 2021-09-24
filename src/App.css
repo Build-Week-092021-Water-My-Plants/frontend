@@ -43,10 +43,8 @@ body {
 .App {
   font-family: "Montserrat", sans-serif;
   text-align: center;
-
-  /* svg {
-    height: 100%;
-  } */
+  height: auto;
+  width: auto;
 }
 
 form#edit_menu {

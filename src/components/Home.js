@@ -17,6 +17,7 @@ const Home = () => {
                     <span className="navspans"> */}
                         <Link to="/meet-our-team"> Meet Our Team </Link>
                     {/* </span> */}
+                    <Link to="/logout" > Log Out </Link>
                 </nav>
             </header>
 
@@ -45,37 +46,47 @@ export default Home;
 
 const StyledHome = styled.div`
     box-sizing: border-box;
-    width:100%;
-    height: auto;
-    background: url("https://media.istockphoto.com/photos/hand-watering-young-plants-in-growing-picture-id1126962479?b=1&k=20&m=1126962479&s=170667a&w=0&h=Pjzibz8tfGau4ah9dNkZs8wycHCdD0KMgZHr38E7dHg=");
+    height: 100%;
+    width: 100%;
+    background: url("https://images.unsplash.com/reserve/SLErBhmTnePXNTLk33fw_DSCF3308.jpg?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: center;
+    background-size: cover;
+
 
     .whole {
         display: flex;
         align-content: center;
         justify-content: center;
+        // width: auto;
+        // height: auto;
     }
 
     .main {
-        background: rgb(66, 126, 54, .5);
-        width: 40%;
-        margin: 0 auto;
+        background: rgb(0, 0, 0, .3);
+        width: 400px;
         text-align: center;
         display: flex;
         flex-direction: column;
-        margin-top: 10%;
-        margin-bottom:10%;
+        margin-top: 8%;
+        margin-bottom: 10%;
+        margin-left: none;
         border: none;
+        border-radius: 10%;
     }
 
+
     header, h1 {
-        margin: 0 10px;
+        width: auto;
+        display: flex;
+        justify-content: flex-end;
+    }
+    header{
+        background-color: rgb(0, 0, 0, .3);
     }
 
     nav {
-        width: 30%;
+        width: 40%;
         white-space: nowrap;
     }
     nav a {
@@ -90,6 +101,10 @@ const StyledHome = styled.div`
         color: white;
     }
 
+.logout{
+    margin-right: 20px;
+}
+
     .main h1 {
         margin: 0 auto;
         font-size: 60px;
@@ -100,7 +115,7 @@ const StyledHome = styled.div`
     .main h3 {
         padding: 3%;
         font-size: 15px;
-        color: white;
+        color: ${({ theme }) => theme.secondaryColor};
     }
 
     .button-container  {
@@ -113,14 +128,16 @@ const StyledHome = styled.div`
         align-items: center;
         background: none;
         margin: 5%;
+        text-decoration: none;
     }
 
     button {
         background-color: ${({ theme }) => theme.secondaryColor};
         padding: 15px;
-        text-decoration: none;
         font-size: 15px;
         color: #d9d9d9;
+        border-radius: 20%;
+        border: 1px solid green;
     }
 
     @media (max-width: 500px) {
@@ -132,16 +149,23 @@ const StyledHome = styled.div`
 
         .main {
             margin-top: 40%;
-            height: 450px;
-            width: 200px;
+            height: auto;
+            width: auto;
         }
 
         nav {
             width: 100%;
+            display:flex;
+            flex-direction: column;
+            flex-grow: 4;
         }
 
         .button-container {
             margin-left: 13%;
+            width: 100%;
+            text-decoration: none;
+        }
+        .whole{
             width: 100%;
         }
     };
@@ -153,13 +177,13 @@ const StyledHome = styled.div`
                 display: none;
             }
         .main {
-            margin-top: 40%;
-            height: 450px;
-            width: 500px;
+            margin-top: 20%;
+
         }
         nav {
             width: 100%;
         }
+        
         .button-container {
             margin-left: 19%;
             width: 100%;
