@@ -99,16 +99,19 @@ export default function AddPlantForm(props) {
 
 const StyledAddPlantForm = styled.div`
     form {
-        background-color: ${prop => prop.theme.primaryColor};
+        background: rgba( 255, 255, 255, 0.2 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 6px );
+        -webkit-backdrop-filter: blur( 6px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
         display:flex;
         flex-direction:column;
         justify-content:center;
         align-items:center;
-        border:1px solid ${prop => prop.theme.accentColor};
         border-radius:20px;
         width:400px;
-        height:300px;
-        margin:2% 0%;
+        margin:10% 0%;
         padding:2% 2%;
     }
 
@@ -133,20 +136,30 @@ const StyledAddPlantForm = styled.div`
     }
 
     button {
-        border-radius: 25px;
         width: 80%;
         height: 40px;
         font-size: 1.3rem;
         color: white;
         font-weight: 700;
-        background: rgb(34, 193, 195);
-        background: linear-gradient(90deg, rgba(34, 193, 195, 1) 0%, #284b63 100%);
         border: 0px;
         cursor: pointer;
+        box-shadow: inset 0 0 0 0;
         transition: opacity 0.25s ease-out;
         margin-top:5%;
+        border-radius: 10px;
+        background-color: rgba( 110, 115, 47, 0.2 );
+        border: 1px solid white;
+
       }
-      button:hover {
+
+    button:hover {
         opacity: 0.85;
+        background: rgba( 110, 115, 47, 0.2 );
+        box-shadow: inset 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 6px );
+        -webkit-backdrop-filter: blur( 6px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        transition: 0.3s;
       }
-`
+`;

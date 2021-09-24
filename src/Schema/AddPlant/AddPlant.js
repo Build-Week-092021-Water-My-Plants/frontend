@@ -121,7 +121,8 @@ export default connect (null, {add})(AddPlant);
 const StyledAddPlants = styled.div`
     background-image: url("https://media.istockphoto.com/photos/hand-watering-young-plants-in-growing-picture-id1126962479?b=1&k=20&m=1126962479&s=170667a&w=0&h=Pjzibz8tfGau4ah9dNkZs8wycHCdD0KMgZHr38E7dHg=");
     background-size: cover;
-    background-color: ${prop => prop.theme.secondaryColor};
+    background-repeat: no-repeat;
+    background-position: center;
     box-sizing:border-box;
     width:100%;
     height:auto;
@@ -170,7 +171,7 @@ const StyledAddPlants = styled.div`
         justify-content:space-around;
         align-items:center;
         width:100%;
-        height:6%;
+        height:3rem;
     }
     nav {
         width:30%;
