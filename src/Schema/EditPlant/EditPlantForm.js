@@ -3,7 +3,7 @@ import { useHistory, useParams } from "react-router-dom";
 import styled from "styled-components";
 
 export default function EditPlantForm(props) {
-    console.log('EditPlantForm.js ln:6 props', props);
+    // console.log('EditPlantForm.js ln:6 props', props);
     const { values, change, disabled, errors, setValues, submitForm } = props;
     // const { plantID } = useParams()
     const history = useHistory();
