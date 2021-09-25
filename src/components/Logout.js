@@ -11,6 +11,7 @@ const Logout = () => {
         window.location.href = '/login'
         // const history = useHistory();
         // history.push('/')
+        props.history.push('/')
 
     };
 
