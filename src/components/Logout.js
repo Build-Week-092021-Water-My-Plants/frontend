@@ -1,17 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from "react-router-dom";
+
 
 
 const Logout = () => {
-    
+    // const history = useHistory();
     const logout = (props) => {
-        console.log('props', props);
+        // console.log('Logout.js ln:10 props', props);
         window.localStorage.clear()
-        window.location.href = '/login'
+        window.location.href = '/'
         // const history = useHistory();
         // history.push('/')
-        props.history.push('/')
+        // history.push('/home')
 
     };
 

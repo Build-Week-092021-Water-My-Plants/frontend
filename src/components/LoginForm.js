@@ -32,7 +32,7 @@ const LoginForm = () => {
             axios.post('https://waterplantsbackend.herokuapp.com/api/auth/login', credentials)
                 .then(res => {
                     // console.log('Login.js ln:30 res', res);//Use Lambda School to test
-                    console.log('Login.js ln:31 res.data', res.data);
+                    // console.log('Login.js ln:31 res.data', res.data);
                     localStorage.setItem("token", res.data.token);
                     localStorage.setItem("user_id", res.data.user_id)
                     login(res.data);
