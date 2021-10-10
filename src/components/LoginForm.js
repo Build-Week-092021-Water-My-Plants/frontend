@@ -11,7 +11,6 @@ const LoginForm = () => {
         {
             username: "",
             password: "",
-            phone_number: "",
         }
     )
     const [error, setError] = useState("");

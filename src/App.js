@@ -16,24 +16,6 @@ import Plant from "./Schema/AddPlant/Plant";
 import PrivateRoute from './components/PrivateRoute';
 import Logout from "./components/Logout";
 
-
-
-
-const StyledBody = styled.div`
-background-color: ${({ theme }) => theme.secondaryColor};
-  header {
-    background-color: ${({ theme }) => theme.primaryColor};
-  }
-
-  header nav a {
-    background-color: ${({ theme }) => theme.secondaryColor};
-  }
-  header nav a:hover {
-    background-color: ${({ theme }) => theme.secondaryColor};
-  }
-`;
-
-
 function App() {
   return (
     <Router>
@@ -73,3 +55,19 @@ function App() {
 }
 
 export default App;
+
+
+
+const StyledBody = styled.div`
+background-color: ${({ theme }) => theme.secondaryColor};
+  header {
+    background-color: ${({ theme }) => theme.primaryColor};
+  }
+
+  header nav a {
+    background-color: ${({ theme }) => theme.secondaryColor};
+  }
+  header nav a:hover {
+    background-color: ${({ theme }) => theme.secondaryColor};
+  }
+`;
