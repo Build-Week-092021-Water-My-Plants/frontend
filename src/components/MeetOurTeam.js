@@ -62,7 +62,7 @@ const MeetOurTeam = () => {
                 <div className='card'>
                     <img
                         className='card-photo'
-                        src='https://ca.slack-edge.com/ESZCHB482-U025FD6HPDG-1ea06076331a-512'
+                        src='https://ca.slack-edge.com/ESZCHB482-U025FD6HPDG-f913138f2f98-72'
                         alt='profile of ADD NAME'
                     />
                     <h2>Alan Waddell </h2>
