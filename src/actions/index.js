@@ -9,7 +9,6 @@ export const FETCH_PLANT_SUCCESS = "FETCH_PLANT_SUCCESS ";
 export const FETCH_FAIL = "FETCH_FAIL";
 export const DELETE_PLANT = "DELETE_PLANT";
 
-
 export const getPlants = () => {
   return (dispatch) => {
     dispatch(fetchStart());

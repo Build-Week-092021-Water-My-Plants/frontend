@@ -19,6 +19,7 @@
     - [Advanced Configuration](#advanced-configuration)
     - [Deployment](#deployment)
     - [`npm run build` fails to minify](#npm-run-build-fails-to-minify)
+  - [Private Route Notes](#private-route-notes)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -115,3 +116,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 Happy Coding! Happy Hacking! You know we will be!
+
+## Private Route Notes
+- Note Tokens are stored in either Memory in the browser session storage or local storage. 
+
+- __Session Storage__ = The sessionStorage object stores data only for a session, meaning that the data is stored until the browser (or tab) is closed.
+- __Local Storage__ HTML5 local storage makes it possible to store values in the browser which can survive the browser session. 
+Local Storage. The Local Storage is a type of Web storage which like cookies is accessible on all windows in the browser. Unless you need something sent with "every request" local storage is superior for the authentication in this project and in most other use cases. While each has their advantages IMO local storage is the go to for temporary storage needs like tokens for login. 
+- __Cookies__ While they can hold much less in storage they are older, and they requre you to set when they expire. Cookies like the other two accompany "every" http request and it's why they are smaller. 
+
+- In this application the token is stored locally and can be observed in the "applications" tabe of Chrome or edge.
+- Example code to use... 
+- localStorage.setItem(name, 'bob')
+- console.log(localStorage.getItem('name'))
