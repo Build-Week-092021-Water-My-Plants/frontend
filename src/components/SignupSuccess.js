@@ -4,13 +4,13 @@ import styled from 'styled-components';
 export default function SignUpSuccess() {
     return (
         <StyledSignUpSuccess>
-           <header>
-               <div>
-                   <img src="/src/assets/waterMyPlants1.jpg" alt="i am plant">
-                       <h1>Success!</h1>
-                   </img>
-               </div>
-           </header>
+            <header>
+                <div>
+                    <img src="/src/assets/waterMyPlants1.jpg" alt="i am plant">
+                        <h1>Success!</h1>
+                    </img>
+                </div>
+            </header>
         </StyledSignUpSuccess>
     )
 }
